@@ -1,15 +1,7 @@
 import express from "express";
-// const express = require("express");
-// const bodyParser = require("body-parser");
-// const cors = require("cors");
-// const cookieParser = require("cookie-parser");
-// const ejs = require("ejs");
 const port = 3000;
 const app = express();
 
-// app.use(bodyParser.urlencoded({ extended: true }));
-
-// mongodb import
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 
