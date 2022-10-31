@@ -8,7 +8,7 @@ import userRouter from "./routes/users.routes.js";
 import menuRouter from "./routes/menu.routes.js";
 import restaurantRouter from "./routes/restaurant.routes.js";
 import authRouter from "./routes/auth.routes.js";
-// import cookieParser from "cookie-parser";
+import cookieParser from "cookie-parser";
 
 dotenv.config();
 
@@ -23,7 +23,7 @@ const connectMongoose = () => {
     });
 };
 
-// app.use(cookieParser);
+app.use(cookieParser());
 app.use(express.json());
 app.use("/users", userRouter);
 app.use("/menu", menuRouter);
