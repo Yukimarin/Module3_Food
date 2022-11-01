@@ -9,6 +9,7 @@ import menuRouter from "./routes/menu.routes.js";
 import restaurantRouter from "./routes/restaurant.routes.js";
 import authRouter from "./routes/auth.routes.js";
 import cookieParser from "cookie-parser";
+import Swal from "sweetalert2";
 
 dotenv.config();
 

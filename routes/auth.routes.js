@@ -1,5 +1,6 @@
 import express from "express";
 import { signup, signin } from "../controllers/auth.controller.js";
+import Swal from "sweetalert2";
 const router = express.Router();
 
 // CRATE A USER
