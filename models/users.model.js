@@ -33,6 +33,10 @@ const userSchema = new mongoose.Schema(
     image: {
       type: String,
     },
+    status: {
+      type: Number,
+      require: true,
+    },
   },
   { timestamps: true }
 );
