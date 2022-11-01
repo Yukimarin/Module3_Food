@@ -38,6 +38,9 @@ app.use("/auth", authRouter);
 app.get("/", (req, res) => {
   res.render("home");
 });
+app.get("/admin", (req, res) => {
+  res.render("admin");
+});
 
 app.get("/login", (req, res) => {
   res.render("login");
