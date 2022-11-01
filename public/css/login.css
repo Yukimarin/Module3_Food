@@ -64,7 +64,7 @@
 .bottom .login-box .login-via{
     margin-top:30px;
     margin-left: 20px;
-    height: 130px;
+    height: 170px;
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
@@ -150,6 +150,31 @@
 
 .login-box .login-via .login-phone .btn-google{
     background-color: #FF5252;
+    border:none;
+    color: white;
+    line-height: 35px;
+}
+.bottom .login-box .login-via .dk {
+    width: 95%;
+    /* margin-left: 11px; */
+    height: 35px;
+    background-color: #FBBC05;
+    border:none;
+    border-radius: 2px;
+    line-height: 30px;
+    font-family: Noto Sans,Arial,sans-serif;
+}
+
+.login-phone .icon-user{
+    color:#FBBC05;
+    position: absolute;
+    /* font-size: large; */
+    top:4px;
+    left:4px;
+}
+
+.login-box .login-via .login-phone .btn-dk{
+    background-color: #FBBC05;
     border:none;
     color: white;
     line-height: 35px;
