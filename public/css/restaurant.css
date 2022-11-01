@@ -1,0 +1,281 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.body{
+    font-family: var(--bs-font-sans-serif);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #f2f2f2;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.container-fluid .logo {
+    width: 70px;
+    height: 50px;
+}
+
+.container-fluid .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Sub heading menu  */
+.container-fluid .menu ul{
+    width: 600px;
+    /* border: 1px solid red; */
+    margin-left: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-nav .nav-item  a {
+    color: black !important;
+}
+
+.container-fluid .register .btn-register{
+    border:1px solid #EE4D2D;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    color:#EE4D2D; 
+    background:#F8F9FA;
+}
+/* Bottom */
+.bottom{
+    width: 100%;
+    height: 320px;
+    margin-top: 30px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bottom .left-bottom {
+    width: 35%;
+    height: 100%;
+    /* border: 1px solid blue; */
+}
+
+.bottom .left-bottom img{
+    width: 100%;
+    height: 100%;
+}
+
+.bottom .right-bottom {
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid blue; */
+}
+
+.link .breadcrumb .breadcrumb-item a{
+    text-decoration: none;
+    color:#6C757D;
+}
+
+.content .shop{
+    font-size: small;
+    color:#959595;
+}
+
+.open-close{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.open-close .status {
+    border: none;
+    border-radius:5px;
+    background-color: #6CC942;
+    color: white;
+    padding:3px 3px;
+}
+
+.fix-content {
+    display: flex;
+}
+
+.fix-content{
+    color: #9595A3;
+    text-transform: uppercase;
+}
+
+.fix-content .fee{
+    border-right: 1px solid grey;
+    padding-right: 50px;
+    margin-right: 10px;
+}
+
+.fix-content  .orange{
+    color:#EE4D2D;  
+    font-weight: bold;
+}
+/* <!-- Sub Footer --> */
+.menu-tab {
+    margin: 0px 70px;
+    margin-bottom: 30px;
+    color:#CF2127;
+    font-size:large;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.menu{
+    margin: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.sub-menu{
+    width: 20%;
+    height: 250px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: white;
+    color:#6D6F71;
+    text-transform: uppercase;
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.detail-menu{
+    width: 60%;
+    background-color: white;
+    margin-right: 10px;
+}
+
+.detail-menu .discount{
+    width: 100%;
+    height: 50px;
+    border: 1px dotted black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #FBF9D8;
+    text-align: center;
+    line-height: 50px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.detail-menu .discount .icon-discount{
+    color:#E54523;
+    font-size: larger;
+}
+
+.detail-menu .search .input-search{
+    width: 95%;
+    height: 40px;
+    border: 1px solid rgb(178, 171, 171);
+    padding-left: 40px;
+    margin-left: 20px;
+}
+
+.detail-menu .search .fa-solid{
+ position: absolute;
+ top: 627px;
+ left: 330px;
+}
+
+.category-menu .category{
+    color:#7E8082;
+    margin: 20px 20px;
+    text-transform: uppercase;
+}
+
+.category-menu .food-list{
+    width: 95%;
+    height: 70px;
+    margin-left: 20px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.category-menu .food-list .image-food{
+    width: 50px;
+    height: 50px;
+    margin: 10px 10px;
+    /* border: 1px solid red; */
+}
+.category-menu .food-list .image-food img{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.category-menu .food-list .name-food{
+    width: 350px;
+    height: 50px;
+    margin: 10px 10px;
+    border: none;
+    line-height: 50px;
+    font-size: large;
+    font-weight: bold;
+    line-height: 50px;
+}
+.category-menu .food-list .price-food{
+    width: 100px;
+    height: 50px;
+    margin: 10px 10px;
+    /* border: 1px solid red; */
+    color: #0288D1;
+    line-height: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+.category-menu .food-list .add-number{
+    width: 30px;
+    height: 30px;
+    margin: 10px 10px;
+    /* border: 1px solid red; */
+    background-color: #EE4D2D;
+    font-size: large;
+    color: white;
+    margin-top: 20px;
+    border:none;
+    border-radius: 5px;
+}
+
+.qr-code{
+    width: 230px;
+    height: 230px;
+}
+
+.qr-code img{
+width: 100%;
+height: 100%;
+}
+/* Footer */
+
+.footer{
+    /* border: 1px solid red; */
+    background-color: #F2F2F2;
+    padding-top: 50px;
+}
+
+.footer .row-1{
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 30px
+   
+}
+
+.footer .row-2 .col-4 ul li{
+   text-decoration: none;
+   list-style: none;
+   /* text-align: center; */
+}
+
+.footer .row-2 .col-4 .logo {
+    width: 200px;
+    height: 70px;
+}
+
+.footer .row-2 .col-4 .logo img{
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,255 @@
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+    font-family: Noto Sans,Arial,sans-serif !important;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #464646;
+    text-align: left;
+    background-color: #f2f2f2;
+}
+
+.container-fluid .logo {
+    width: 70px;
+    height: 50px;
+}
+
+.container-fluid .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Sub heading menu  */
+.container-fluid .menu ul{
+    width: 600px;
+    /* border: 1px solid red; */
+    margin-left: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-nav .nav-item  a {
+    color: black !important;
+}
+
+/* Đăng nhập */
+.container-fluid .register .btn-register{
+    border:1px solid #EE4D2D;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    color:#EE4D2D; 
+    background:#F8F9FA;
+}
+
+/* Bottom Menu order */
+.bottom {
+    background-color: #F2F2F2;
+    text-align: center;
+}
+
+.bottom .login-box{
+    width: 550px;
+    height: 600px;
+    padding-top: 30px;
+    margin-left: 350px;
+    /* border: 1px solid red; */
+    background-color: white;
+}
+
+.bottom .login-box .login-via{
+    margin-top:30px;
+    margin-left: 20px;
+    height: 130px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between  ;
+}
+
+/* loginphone */
+.bottom .login-box .login-via .login-phone {
+    width: 95%;
+    /* margin-left: 11px; */
+    height: 35px;
+    background-color: #329900;
+    border:none;
+    border-radius: 2px;
+    line-height: 30px;
+    font-family: Noto Sans,Arial,sans-serif;
+}
+
+.login-box .login-via .login-phone .icon-phone {
+    width: 25px;
+    height: 25px;
+    margin: 5px 10px;
+    border-radius: 50%;
+    background-color: white;
+    float: left;
+    position: relative;
+}
+
+.login-phone .icon-phone .fa-solid{
+    color:#329900;
+    position: absolute;
+    top:4px;
+    left:7px;
+}
+.login-box .login-via .login-phone .btn-phone{
+    background-color: #329900;
+    border:none;
+    color: white;
+    line-height: 35px;
+}
+/* loginfb */
+.bottom .login-box .login-via .login-fb {
+    background-color: #187CAA;
+}
+
+.login-phone .icon-phone .fa-facebook-f{
+    color:#187CAA;
+    position: absolute;
+    font-size: large;
+    top:3px;
+    left:6px;
+}
+
+.login-box .login-via .login-phone .btn-fb{
+    background-color: #187CAA;
+    border:none;
+    color: white;
+    line-height: 35px;
+}
+
+/* logingg */
+.bottom .login-box .login-via .login-google { 
+    background-color: #FF5252;
+}
+
+.login-box .login-via .login-fb .icon-phone {
+    width: 25px;
+    height: 25px;
+    margin: 5px 10px;
+    border-radius: 50%;
+    background-color: white;
+    float: left;
+    position: relative;
+}
+
+.login-phone .icon-phone .fa-google-plus-g{
+    color:#FF5252;
+    position: absolute;
+    /* font-size: large; */
+    top:4px;
+    left:4px;
+}
+
+.login-box .login-via .login-phone .btn-google{
+    background-color: #FF5252;
+    border:none;
+    color: white;
+    line-height: 35px;
+}
+/* end login via */
+
+.login-box .text{
+    margin-top: 40px;
+    font-size: small;
+}
+/* login field */
+.form-login .username .input-username {
+    width: 95%;
+    height: 40px;
+    padding-left: 35px;
+}
+
+.form-login .username .icon-mail {
+    position: absolute;
+    top: 365px;
+    left: 375px;
+    color:#9FA9AA;
+}
+
+.form-login .pass .input-pass {
+    width: 95%;
+    height: 40px;
+    padding-left: 35px;
+}
+
+.form-login .pass .icon-lock {
+    position: absolute;
+    top: 405px;
+    left: 375px;
+    color:#9FA9AA;
+}
+
+/* submit login*/
+.forgot-pass {
+    /* border:1px solid red; */
+    font-size: small;
+    margin-top: 15px;
+    padding: 5px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.forgot-pass .check-text{
+    margin-left: 5px;
+}
+
+.forgot-pass .forgot-password a{
+    text-decoration: none;
+}
+
+.btn-submit{
+    width: 95%;
+    height: 35px;
+    margin-top: 20px;
+    background-color: #0288D1;
+    border:none;
+    border-radius: 3px;
+    color:white;
+    font-size: large;
+}
+
+.login-mess-policy{
+    margin-top: 30px;
+    font-size: small;
+}
+.login-mess-policy a{
+    color:#0288D1
+}
+
+/* Footer */
+.footer{
+    /* border: 1px solid red; */
+    background-color: #F2F2F2;
+}
+
+.footer .row-1{
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 30px
+   
+}
+
+.footer .row-2 .col-4 ul li{
+   text-decoration: none;
+   list-style: none;
+   /* text-align: center; */
+}
+
+.footer .row-2 .col-4 .logo {
+    width: 200px;
+    height: 70px;
+}
+
+.footer .row-2 .col-4 .logo img{
+    width: 100%;
+    height: 100%;
+}
