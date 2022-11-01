@@ -47,6 +47,10 @@ app.get("/register", (req, res) => {
   res.render("register");
 });
 
+app.get("/restaurant", (req, res) => {
+  res.render("restaurant");
+});
+
 app.listen(port, () => {
   connectMongoose();
   console.log("hello world");

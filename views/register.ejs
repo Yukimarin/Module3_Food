@@ -67,13 +67,14 @@
         <h5>Đăng ký</h5>
         <hr />
         <div class="field-register">
-          <form class="all-field" action="">
+          <form id="registerPage" class="all-field" action="">
             <div class="username">
-              <label for="email"><b>Họ và tên</b></label>
+              <label for="name"><b>Họ và tên*</b></label>
             </div>
             <input
               type="text"
               placeholder="Vui lòng nhập họ và tên"
+              id="username"
               name="username"
               class="username field"
               required
@@ -82,61 +83,67 @@
               <label for="email"><b>Email*</b></label>
             </div>
             <input
-              type="text"
+              type="email"
               placeholder="Vui lòng điền email đăng nhập"
+              id="email"
               name="email"
               class="email field"
               required
             />
             <div class="Phone">
-              <label for="email"><b>Số điện thoại*</b></label>
+              <label for="phone"><b>Số điện thoại*</b></label>
             </div>
             <input
-              type="text"
+              type="number"
               placeholder="Vui lòng số điện thoại"
+              id="phone"
               name="phone"
               class="phone field"
               required
             />
             <div class="Address">
-              <label for="email"><b>Địa chỉ*</b></label>
+              <label for="address"><b>Địa chỉ*</b></label>
             </div>
             <input
               type="text"
               placeholder="Vui lòng nhập địa chỉ nhận hàng"
+              id="address"
               name="address"
               class="address field"
               required
             />
             <div class="password">
-              <label for="email"><b>Mật khẩu*</b></label>
+              <label for="password"><b>Mật khẩu*</b></label>
             </div>
             <input
-              type="text"
+              type="password"
               placeholder="Vui lòng nhập mật khẩu"
+              id="password"
               name="password"
               class="password field"
               required
             />
             <div class="confirm-password">
-              <label for="email"><b>Xác nhận mật khẩu</b></label>
+              <label for="confirm-password"><b>Xác nhận mật khẩu*</b></label>
             </div>
             <input
-              type="text"
+              type="password"
               placeholder="Vui lòng nhập lại mật khẩu"
-              name="confirm-password"
+              id="confirm-password"
+              name="confirmPassword"
               class="confirm-password field"
               required
             />
+            <div class="login-mess-policy">
+              <input type="checkbox" required/><span class="check-text"></span>
+                Chúng tôi không sử dụng thông tin của bạn với bấm kỳ mục đích nào.
+                Bằng cách đăng nhập hoặc đăng ký, bạn đồng ý với</span
+              >
+              <a href="">Chính sách quy định của OrderFood</a>
+            </div>
+            <div class="alert alert-danger"></div>
+            <button id="btn-sumit" class="btn-submit">Đăng ký</button>
           </form>
-          <div class="login-mess-policy">
-            <input type="checkbox" /><span class="check-text"></span>
-              Chúng tôi không sử dụng thông tin của bạn với bấn kỳ mục đích nào.
-              Bằng cách đăng nhập hoặc đăng ký, bạn đồng ý với</span
-            >
-            <a href="">Chính sách quy định của OrderFood</a>
-          </div>
-          <button class="btn-submit">Đăng nhập</button>
         </div>
       </div>
     </div>
