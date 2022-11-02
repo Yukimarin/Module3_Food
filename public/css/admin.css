@@ -437,3 +437,17 @@ nav .profile-details i{
     width: calc(100% - 60px);
   }
 }
+
+.user-management{
+    margin-top: 100px;
+}
+
+.symbol {
+  height: 50px;
+  width: 50px;
+}
+
+.symbol img{
+  width: 100%;
+  height: 100%;
+}

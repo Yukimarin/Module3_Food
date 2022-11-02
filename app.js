@@ -58,6 +58,10 @@ app.get("/user-info", (req, res) => {
   res.render("user-info");
 });
 
+app.get("/admin", (req, res) => {
+  res.render("admin");
+});
+
 app.listen(port, () => {
   connectMongoose();
   console.log("hello world");
