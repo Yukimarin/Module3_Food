@@ -19,11 +19,11 @@ export const signup = async (req, res, next) => {
 export const signin = async (req, res, next) => {
   try {
     const user = await User.findOne({ email: req.body.email });
-    console.log(user);
-    if (!user) return next(createError(404, "User not found!"));
-
+    // console.log(user);
+    // console.log(user.status);
+    if (!user) return next(404, "User not found!");
+    if (user.status === 0) return next(500);
     const isCorrect = bcrypt.compare(req.body.password, user.password);
-
     if (!isCorrect) return next(400, "Wrong Credentials!");
 
     const token = jwt.sign({ id: user._id }, process.env.JWT);
@@ -34,8 +34,17 @@ export const signin = async (req, res, next) => {
         httpOnly: true,
       })
       .status(200)
-      .json(others);
+      .json("others");
   } catch (err) {
     next(err);
+  }
+};
+
+export const signout = async (req, res, next) => {
+  try {
+    req.session = null;
+    return res.status(200).send({ message: "You've been signed out!" });
+  } catch (err) {
+    this.next(err);
   }
 };

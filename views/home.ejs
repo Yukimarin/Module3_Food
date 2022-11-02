@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Home</title>
+  </head>
+  <body>
+    <!-- Heading -->
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <div class="logo">
+          <img src="/img/symbol.png" alt="" />
+        </div>
+
+        <div class="menu collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Đồ ăn</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Thực phẩm</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Bia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Hoa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Siêu thị</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Thuốc</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Thú cưng</a>
+            </li>
+          </ul>
+        </div>
+        <div class="register">
+          <button class="btn-register">Đăng nhập</button>
+        </div>
+        <div id="info" class="info">
+          <div class="img-info">
+            <img
+              src="https://images.foody.vn/usr/g4512/45113154/avt/s200x200/foody-avatar-c9478b29-965b-4a66--8d14497a-221031092650.jpeg"
+              alt=""
+            />
+          </div>
+          <div class="name-info">Bách Nguyễn</div>
+        </div>
+        <div id="edit-user" class="edit-user">
+          <div
+            class="bag"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            <i class="fa-solid fa-bag-shopping"></i>
+            Giỏ hàng
+          </div>
+          <div class="update">
+            <i class="fa-solid fa-user-plus"></i>
+            Cập nhật tài khoản
+          </div>
+          <div class="logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Đăng xuất
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Lịch sử mua hàng
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="container-fluid bottom">
+      <!-- Đồ ăn -->
+      <div class="model-box">
+        <div class="sectionHeading">Đồ ăn</div>
+        <div class="product-men">
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g96/959257/prof/s280x175/foody-upload-api-foody-mobile-avar8-190920152027.jpg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div id="des" class="dep">Vịt Quay Chị Béo</div>
+              <div class="address">156 Ngõ 94 Hoàng Ngân, Cầu Giấy, Hà Nội</div>
+              <div>150,000 - 200,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g19/180102/prof/s280x175/image-1142eab8-200910115828.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div id="des1" class="dep">Cơm Rang Dưa Bò Đức Hạnh</div>
+              <div class="address">156 Ngõ 94 Hoàng Ngân, Cầu Giấy, Hà Nội</div>
+              <div>30,000 - 50,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g112/1115646/prof/s640x400/file_restaurant_photo_vj5l_16502-cb6b6040-220418202001.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div>Bánh Cuốn Thanh Hóa - Nguyễn Xiển</div>
+              <div class="address">
+                250 Nguyễn Xiển, P. Hạ Đình, Thanh Xuân, Hà Nội
+              </div>
+              <div>35,000 - 35,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g77/765333/prof/s280x175/file_restaurant_photo_rxfl_16200-518d0cbf-210503192254.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div>Nem Lụi, Thịt Heo & Chân Gà</div>
+              <div class="address">
+                N5D Hoàng Đạo Thúy, P. Nhân Chính, Thanh Xuân, Hà Nội
+              </div>
+              <div>5,000 - 90,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g107/1060593/prof/s640x400/foody-upload-api-foody-mobile-img_0075-1-201217162849.jpg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div>Bin Bin - Đồ Ăn Vặt Online</div>
+              <div class="address">
+                Ngõ 481 Vũ Tông Phan, P. Khương Đình, Thanh Xuân, Hà Nội
+              </div>
+              <div>3,500 - 50,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+        </div>
+        <br />
+        <span>
+          <a
+            href="http://127.0.0.1:5501/DepNam/depnam.html"
+            style="text-decoration: none; color: grey; font-size: small"
+            >Còn nhiều lắm, xem thêm</a
+          >
+        </span>
+      </div>
+      <!-- Thực phẩm -->
+      <div class="model-box">
+        <div class="sectionHeading">Thực phẩm</div>
+        <div class="product-men">
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g96/959257/prof/s280x175/foody-upload-api-foody-mobile-avar8-190920152027.jpg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div id="des" class="dep">Mật Ong CvdBeehoney</div>
+              <div class="address">156 Ngõ 94 Hoàng Ngân, Cầu Giấy, Hà Nội</div>
+              <div>150,000 - 200,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g110/1095765/prof/s640x400/foody-upload-api-foody-mobile-z2-a60c78c9-210817144947.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div id="des1" class="dep">Chick Garden Mart</div>
+              <div class="address">
+                22 Thượng Đình, P. Thượng Đình, Thanh Xuân, Hà Nội
+              </div>
+              <div>30,000 - 50,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g112/1115646/prof/s640x400/file_restaurant_photo_vj5l_16502-cb6b6040-220418202001.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div>Bánh Cuốn Thanh Hóa - Nguyễn Xiển</div>
+              <div class="address">
+                250 Nguyễn Xiển, P. Hạ Đình, Thanh Xuân, Hà Nội
+              </div>
+              <div>35,000 - 35,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g77/765333/prof/s280x175/file_restaurant_photo_rxfl_16200-518d0cbf-210503192254.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div>Nem Lụi, Thịt Heo & Chân Gà</div>
+              <div class="address">
+                N5D Hoàng Đạo Thúy, P. Nhân Chính, Thanh Xuân, Hà Nội
+              </div>
+              <div>5,000 - 90,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g107/1060593/prof/s640x400/foody-upload-api-foody-mobile-img_0075-1-201217162849.jpg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div>Bin Bin - Đồ Ăn Vặt Online</div>
+              <div class="address">
+                Ngõ 481 Vũ Tông Phan, P. Khương Đình, Thanh Xuân, Hà Nội
+              </div>
+              <div>3,500 - 50,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+        </div>
+        <br />
+        <span>
+          <a
+            href="http://127.0.0.1:5501/DepNam/depnam.html"
+            style="text-decoration: none; color: grey; font-size: small"
+            >Còn nhiều lắm, xem thêm</a
+          >
+        </span>
+      </div>
+      <!-- Bia  -->
+      <div class="model-box">
+        <div class="sectionHeading">Thực phẩm</div>
+        <div class="product-men">
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g96/959257/prof/s280x175/foody-upload-api-foody-mobile-avar8-190920152027.jpg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div id="des" class="dep">Mật Ong CvdBeehoney</div>
+              <div class="address">156 Ngõ 94 Hoàng Ngân, Cầu Giấy, Hà Nội</div>
+              <div>150,000 - 200,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g110/1095765/prof/s640x400/foody-upload-api-foody-mobile-z2-a60c78c9-210817144947.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div id="des1" class="dep">Chick Garden Mart</div>
+              <div class="address">
+                22 Thượng Đình, P. Thượng Đình, Thanh Xuân, Hà Nội
+              </div>
+              <div>30,000 - 50,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g112/1115646/prof/s640x400/file_restaurant_photo_vj5l_16502-cb6b6040-220418202001.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div>Bánh Cuốn Thanh Hóa - Nguyễn Xiển</div>
+              <div class="address">
+                250 Nguyễn Xiển, P. Hạ Đình, Thanh Xuân, Hà Nội
+              </div>
+              <div>35,000 - 35,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g77/765333/prof/s280x175/file_restaurant_photo_rxfl_16200-518d0cbf-210503192254.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div>Nem Lụi, Thịt Heo & Chân Gà</div>
+              <div class="address">
+                N5D Hoàng Đạo Thúy, P. Nhân Chính, Thanh Xuân, Hà Nội
+              </div>
+              <div>5,000 - 90,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g107/1060593/prof/s640x400/foody-upload-api-foody-mobile-img_0075-1-201217162849.jpg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div>Bin Bin - Đồ Ăn Vặt Online</div>
+              <div class="address">
+                Ngõ 481 Vũ Tông Phan, P. Khương Đình, Thanh Xuân, Hà Nội
+              </div>
+              <div>3,500 - 50,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+        </div>
+        <br />
+        <span>
+          <a
+            href="http://127.0.0.1:5501/DepNam/depnam.html"
+            style="text-decoration: none; color: grey; font-size: small"
+            >Còn nhiều lắm, xem thêm</a
+          >
+        </span>
+      </div>
+      <!-- Hoa -->
+      <div class="model-box">
+        <div class="sectionHeading">Hoa</div>
+        <div class="product-men">
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g96/959257/prof/s280x175/foody-upload-api-foody-mobile-avar8-190920152027.jpg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div id="des" class="dep">Mật Ong CvdBeehoney</div>
+              <div class="address">156 Ngõ 94 Hoàng Ngân, Cầu Giấy, Hà Nội</div>
+              <div>150,000 - 200,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g110/1095765/prof/s640x400/foody-upload-api-foody-mobile-z2-a60c78c9-210817144947.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div id="des1" class="dep">Chick Garden Mart</div>
+              <div class="address">
+                22 Thượng Đình, P. Thượng Đình, Thanh Xuân, Hà Nội
+              </div>
+              <div>30,000 - 50,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g112/1115646/prof/s640x400/file_restaurant_photo_vj5l_16502-cb6b6040-220418202001.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div>Bánh Cuốn Thanh Hóa - Nguyễn Xiển</div>
+              <div class="address">
+                250 Nguyễn Xiển, P. Hạ Đình, Thanh Xuân, Hà Nội
+              </div>
+              <div>35,000 - 35,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g77/765333/prof/s280x175/file_restaurant_photo_rxfl_16200-518d0cbf-210503192254.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div>Nem Lụi, Thịt Heo & Chân Gà</div>
+              <div class="address">
+                N5D Hoàng Đạo Thúy, P. Nhân Chính, Thanh Xuân, Hà Nội
+              </div>
+              <div>5,000 - 90,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g107/1060593/prof/s640x400/foody-upload-api-foody-mobile-img_0075-1-201217162849.jpg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div>Bin Bin - Đồ Ăn Vặt Online</div>
+              <div class="address">
+                Ngõ 481 Vũ Tông Phan, P. Khương Đình, Thanh Xuân, Hà Nội
+              </div>
+              <div>3,500 - 50,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+        </div>
+        <br />
+        <span>
+          <a
+            href="http://127.0.0.1:5501/DepNam/depnam.html"
+            style="text-decoration: none; color: grey; font-size: small"
+            >Còn nhiều lắm, xem thêm</a
+          >
+        </span>
+      </div>
+      <!-- Siêu thị -->
+      <div class="model-box">
+        <div class="sectionHeading">Siêu thị</div>
+        <div class="product-men">
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g96/959257/prof/s280x175/foody-upload-api-foody-mobile-avar8-190920152027.jpg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div id="des" class="dep">Mật Ong CvdBeehoney</div>
+              <div class="address">156 Ngõ 94 Hoàng Ngân, Cầu Giấy, Hà Nội</div>
+              <div>150,000 - 200,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g110/1095765/prof/s640x400/foody-upload-api-foody-mobile-z2-a60c78c9-210817144947.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div id="des1" class="dep">Chick Garden Mart</div>
+              <div class="address">
+                22 Thượng Đình, P. Thượng Đình, Thanh Xuân, Hà Nội
+              </div>
+              <div>30,000 - 50,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g112/1115646/prof/s640x400/file_restaurant_photo_vj5l_16502-cb6b6040-220418202001.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div>Bánh Cuốn Thanh Hóa - Nguyễn Xiển</div>
+              <div class="address">
+                250 Nguyễn Xiển, P. Hạ Đình, Thanh Xuân, Hà Nội
+              </div>
+              <div>35,000 - 35,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g77/765333/prof/s280x175/file_restaurant_photo_rxfl_16200-518d0cbf-210503192254.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div>Nem Lụi, Thịt Heo & Chân Gà</div>
+              <div class="address">
+                N5D Hoàng Đạo Thúy, P. Nhân Chính, Thanh Xuân, Hà Nội
+              </div>
+              <div>5,000 - 90,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g107/1060593/prof/s640x400/foody-upload-api-foody-mobile-img_0075-1-201217162849.jpg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div>Bin Bin - Đồ Ăn Vặt Online</div>
+              <div class="address">
+                Ngõ 481 Vũ Tông Phan, P. Khương Đình, Thanh Xuân, Hà Nội
+              </div>
+              <div>3,500 - 50,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+        </div>
+        <br />
+        <span>
+          <a
+            href="http://127.0.0.1:5501/DepNam/depnam.html"
+            style="text-decoration: none; color: grey; font-size: small"
+            >Còn nhiều lắm, xem thêm</a
+          >
+        </span>
+      </div>
+      <!-- Thuốc -->
+      <div class="model-box">
+        <div class="sectionHeading">Thuốc</div>
+        <div class="product-men">
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g96/959257/prof/s280x175/foody-upload-api-foody-mobile-avar8-190920152027.jpg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div id="des" class="dep">Mật Ong CvdBeehoney</div>
+              <div class="address">156 Ngõ 94 Hoàng Ngân, Cầu Giấy, Hà Nội</div>
+              <div>150,000 - 200,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g110/1095765/prof/s640x400/foody-upload-api-foody-mobile-z2-a60c78c9-210817144947.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div id="des1" class="dep">Chick Garden Mart</div>
+              <div class="address">
+                22 Thượng Đình, P. Thượng Đình, Thanh Xuân, Hà Nội
+              </div>
+              <div>30,000 - 50,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g112/1115646/prof/s640x400/file_restaurant_photo_vj5l_16502-cb6b6040-220418202001.jpeg"
+                alt=""
+              />
+              <button id="like2" class="like">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="description">
+              <div>Bánh Cuốn Thanh Hóa - Nguyễn Xiển</div>
+              <div class="address">
+                250 Nguyễn Xiển, P. Hạ Đình, Thanh Xuân, Hà Nội
+              </div>
+              <div>35,000 - 35,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g77/765333/prof/s280x175/file_restaurant_photo_rxfl_16200-518d0cbf-210503192254.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div>Nem Lụi, Thịt Heo & Chân Gà</div>
+              <div class="address">
+                N5D Hoàng Đạo Thúy, P. Nhân Chính, Thanh Xuân, Hà Nội
+              </div>
+              <div>5,000 - 90,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g107/1060593/prof/s640x400/foody-upload-api-foody-mobile-img_0075-1-201217162849.jpg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div>Bin Bin - Đồ Ăn Vặt Online</div>
+              <div class="address">
+                Ngõ 481 Vũ Tông Phan, P. Khương Đình, Thanh Xuân, Hà Nội
+              </div>
+              <div>3,500 - 50,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+        </div>
+        <br />
+        <span>
+          <a
+            href="http://127.0.0.1:5501/DepNam/depnam.html"
+            style="text-decoration: none; color: grey; font-size: small"
+            >Còn nhiều lắm, xem thêm</a
+          >
+        </span>
+      </div>
+      <!-- Thú cưng -->
+      <div class="model-box">
+        <div class="sectionHeading">Thú cưng</div>
+        <div class="product-men">
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g96/959257/prof/s280x175/foody-upload-api-foody-mobile-avar8-190920152027.jpg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div id="des" class="dep">Mật Ong CvdBeehoney</div>
+              <div class="address">156 Ngõ 94 Hoàng Ngân, Cầu Giấy, Hà Nội</div>
+              <div>150,000 - 200,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g110/1095765/prof/s640x400/foody-upload-api-foody-mobile-z2-a60c78c9-210817144947.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div id="des1" class="dep">Chick Garden Mart</div>
+              <div class="address">
+                22 Thượng Đình, P. Thượng Đình, Thanh Xuân, Hà Nội
+              </div>
+              <div>30,000 - 50,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g112/1115646/prof/s640x400/file_restaurant_photo_vj5l_16502-cb6b6040-220418202001.jpeg"
+                alt=""
+              />
+              <button id="like2" class="like">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="description">
+              <div>Bánh Cuốn Thanh Hóa - Nguyễn Xiển</div>
+              <div class="address">
+                250 Nguyễn Xiển, P. Hạ Đình, Thanh Xuân, Hà Nội
+              </div>
+              <div>35,000 - 35,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g77/765333/prof/s280x175/file_restaurant_photo_rxfl_16200-518d0cbf-210503192254.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div>Nem Lụi, Thịt Heo & Chân Gà</div>
+              <div class="address">
+                N5D Hoàng Đạo Thúy, P. Nhân Chính, Thanh Xuân, Hà Nội
+              </div>
+              <div>5,000 - 90,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+          <div class="section-product">
+            <div class="product-picture product-row">
+              <img
+                src="https://images.foody.vn/res/g107/1060593/prof/s640x400/foody-upload-api-foody-mobile-img_0075-1-201217162849.jpg"
+                alt=""
+              />
+            </div>
+            <div class="description">
+              <div>Bin Bin - Đồ Ăn Vặt Online</div>
+              <div class="address">
+                Ngõ 481 Vũ Tông Phan, P. Khương Đình, Thanh Xuân, Hà Nội
+              </div>
+              <div>3,500 - 50,000</div>
+            </div>
+            <button class="button-buy">
+              <a href=""> Thêm vào giỏ hàng</a>
+            </button>
+          </div>
+        </div>
+        <br />
+        <span>
+          <a
+            href="http://127.0.0.1:5501/DepNam/depnam.html"
+            style="text-decoration: none; color: grey; font-size: small"
+            >Còn nhiều lắm, xem thêm</a
+          >
+        </span>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid footer">
+      <div class="step-order">
+        <img src="/img/quytrinh.JPG" alt="" />
+      </div>
+      <div class="step-order partner">
+        <div class="text">
+          <h4>Ứng dụng Order Partner</h4>
+          <ul>
+            <li>
+              <strong>Ứng dụng Order Partner</strong> là ứng dụng quản lý đơn
+              hàng cho các nhà hàng đối tác của dịch vụ đặt món tận nơi
+            </li>
+            <li>
+              <strong>OrderFood.vn</strong> luôn sẵn sàng hợp tác với các nhà
+              hàng, quán ăn, cafe,... để mở rộng kinh doanh cũng như gia tăng
+              khách hàng. Hãy kết nối vào hệ thống đặt và giao hàng để giảm bớt
+              chi phí quản lý, vận hành, marketing, công nghệ,...
+            </li>
+            <p>Đăng ký tham gia: <a href="">tại đây</a></p>
+          </ul>
+        </div>
+        <div class="image">
+          <img src="/img/partner.png" alt="" />
+        </div>
+      </div>
+      <div class="step-order other-partner">
+        <div class="text">
+          <a href=""
+            ><span>OrderFood.vn</span
+            ><span>Hợp tác nhân viên giao nhận - OrderFood Driver</span></a
+          >
+          <p>Giúp bạn tăng thu nhận trong thời gian rảnh rỗi</p>
+          <span
+            ><strong>OrderFood</strong> tìm kiếm hợp tác với các cá nhân để thực
+            hiện việc giao hàng, chúng tôi sẽ cung cấp ứng dụng (app), 1 số dụng
+            cụ cần thiết để bạn có thể tiếp nhận & giao hàng, kiếm thêm thu nhập
+            Đăng ký tham gia <a href="">tại đây</a> hoặc gửi Email qua
+            <a href="">tuyendung@gofast.vn</a> - hoặc gọi qua số điện thoại
+            (028) 7109 9179.
+          </span>
+        </div>
+        <div class="image"><img src="/img/hoptac.JPG" alt="" /></div>
+      </div>
+      <div class="footer-text">
+        <div class="heading-text">
+          <div>
+            <strong
+              >OrderFood Fresh - Đi chợ online gói gọn trong bàn tay</strong
+            >
+          </div>
+          <div>
+            OrderFood Fresh là một trong những ứng dụng đi chợ online có sức ảnh
+            hưởng và thu hút sự chú ý của nhiều người dùng với loạt ưu điểm sáng
+            giá, như chỉ cần vài cú click đơn giản là bạn có thể dễ dàng lựa
+            chọn những loại thực phẩm tươi ngon nhất cho bữa cơm gia đình dù
+            đang ở nơi đâu. Tiết kiệm thời gian, hàng lọat
+            <a href="">deal giảm giá</a> , không chen chúc mua đồ và xếp hàng
+            thanh toán
+            <br />
+            Bạn có thể đặt mua online thịt, cá , trứng, sữa, trái cây, rau củ
+            quả và rất nhiều mặt hàng tươi sống khác nữa trên hệ thống của
+            OrderFood Fresh.
+          </div>
+        </div>
+        <div class="bottom-text">
+          <div>
+            <strong
+              >Tại sao lại lựa chọn đặt thực phẩm online qua ShopeeFood Fresh?
+            </strong>
+          </div>
+          <ul>
+            Là ứng dụng đi chợ online đầu tiên tại Việt Nam, ShopeeFood Fresh đã
+            mang lại nhiều ưu thế cũng như cạnh tranh mạnh mẽ so với các nền
+            tảng đối thủ khác cũng như so với cách đi chợ truyền thống
+            <li>
+              <strong>Danh sách siêu thị, cửa hàng tiện lợi</strong> được cập
+              nhật thường xuyên ở tỉnh thành khác nhau, cập nhật liên tục về địa
+              điểm, giá cả và thời gian; giúp việc đi chợ trực tuyến trở nên dễ
+              dàng
+            </li>
+            <li>
+              <strong>Ưu đãi ngập tràn:</strong> deal giảm giá, đồng giá khủng
+              từ hàng loạt cửa hàng hợp tác trên ShopeeFood Fresh: Món Ngon -
+              Thực phẩm sạch 3 miền, Aeon Mall, Cooky Market... bạn sẽ dễ dàng
+              tìm và chọn lựa nguồn nguyên liệu thực phẩm mà mình cho rằng hợp
+              lý với bữa ăn gia đình
+            </li>
+            <li>
+              <strong>Nguồn hàng tươi sống an toàn - giá rẻ:</strong>Chợ thực
+              phẩm online là nơi có thể mua rau củ quả, thịt, cá, hải sản, trái
+              cây nội/ ngoại nhập, gạo, gia vị, trà, thực phẩm dinh dưỡng... với
+              định lượng rõ ràng. Thậm chí bạn còn có thể tìm thấy những món đặc
+              sản vùng miền ngay trên ShopeeFood Fresh mà không cần cất công tìm
+              kiếm cửa hàng. Nếu bạn còn băn khoăn mua thực phẩm tươi sống
+              online trên ShopeeFood có đảm bảo không thì hoàn toàn có thể tin
+              tưởng với chính sách và dịch vụ khách hàng của ShopeeFood.
+            </li>
+            <li>
+              <strong>Tiện dụng và tiết kiệm:</strong> với ứng dụng đi chợ trực
+              tuyến ShopeeFood, hỗ trợ bạn tìm kiếm và mua thực phẩm online đúng
+              nhu cầu, uy tín và có nguồn cung cấp rõ ràng có thương hiệu trên
+              thị trường. Ngoài việc tiết kiệm chi phí đi lại, hình thức đi chợ
+              online còn có nhiều ưu điểm khác: miễn phí ship đồ ăn online trong
+              vòng bán kính 3km, giao hàng siêu tốc 1 tiếng… Đó là còn chưa kể,
+              ShopeeFood Fresh còn cung cấp loạt bộ sưu tập với nhiều gợi ý: Đi
+              chợ online, Siêu thị thực phẩm,...
+            </li>
+          </ul>
+        </div>
+        <div class="sub-footer-text">
+          <div>
+            <strong
+              >Trải nghiệm thân thiện, thanh toán đơn giản với App
+              OrderFood</strong
+            >
+          </div>
+          <div>
+            Giao diện ứng dụng đi chợ online OrderFood Fresh được tối ưu với các
+            đề mục cụ thể, đồng thời phân chia rõ thành các bộ sưu tập khác nhau
+            trên ứng dụng giúp cho việc đi chợ online trở nên dễ dàng hơn. Chưa
+            kể, nhằm tiếp tục mang đến sự thuận tiện cho người dùng, ShopeeFood
+            Fresh - dịch vụ đi chợ mua thực phẩm tươi sống online - ngoài việc
+            có mặt trên ShopeeFood mà đã có mặt trên ứng dụng Shopee - mang đến
+            trải nghiệm mua sắm trực tuyến thuận tiện, nhanh chóng và an toàn
+            trong giai đoạn bình thường mới.
+            <br />
+            Ứng dụng đi chợ bên cạnh hình thức trả tiền mặt khi nhận hàng, người
+            dùng OrderFood còn có thể thanh toán qua ví điện tử ShopeePay với
+            nhiều ưu đãi hấp dẫn, thẻ tín dụng (Visa/Mastercard), thẻ ATM hoặc
+            tài khoản ngân hàng online (iBanking)
+          </div>
+        </div>
+      </div>
+      <div class="row row-1">
+        <div class="col-2">Công ty</div>
+        <div class="col-6">Ứng dụng OrderFood</div>
+        <div class="col-4">Địa chỉ công ty</div>
+      </div>
+      <div class="row row-2">
+        <div class="col-4">
+          <ul>
+            <li>Giới thiệu</li>
+            <li>Trung tâm Trợ giúp</li>
+            <li>Quy chế</li>
+            <li>Điều khoản sử dụng</li>
+            <li>Bảo mật thông tin</li>
+            <li>Giải quyết khiếu nại</li>
+            <li>Liên hệ</li>
+            <li>Hợp tác nhân giao nhận</li>
+            <li>Đăng ký quán</li>
+            <li>OrderFood Uni</li>
+            <li>Order Blog</li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <img src="/img/download.JPG" alt="" />
+        </div>
+        <div class="col-4">
+          <div class="text">
+            <div>Công ty Cổ phần Foody</div>
+            <div>Lầu G, Tòa nhà Jabes 1,</div>
+            <div>
+              Số 244 đường Cống Quỳnh, phường Phạm Ngũ Lão, Quận 1, TPHCM
+            </div>
+            <div>Giấy CN ĐKDN số: 0311828036</div>
+            <div>do Sở Kế hoạch và Đầu tư TP.HCM cấp ngày 11/6/2012,</div>
+            <div>sửa đổi lần thứ 23, ngày 10/12/2020</div>
+            <div>Số điện thoại: 1900 2042</div>
+            <div>Email: support@shopeefood.vn</div>
+            <div class="logo">
+              <img src="/img/logo.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="/js/home.js"></script>
+  </body>
+</html>
