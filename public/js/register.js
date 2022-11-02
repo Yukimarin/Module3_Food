@@ -1,31 +1,20 @@
-let registerPage = document.getElementById("registerPage");
+let submit = document.getElementById("btn-submit");
 
-registerPage.addEventListener("click", (e) => {
+submit.addEventListener("click", (e) => {
   e.preventDefault();
-  let info = {
-    userName: registerPage.username.value,
-    phone: registerPage.phone.value,
-    address: registerPage.address.value,
-    emailDK: registerPage.email.value,
-    passwordDK: registerPage.password.value,
-    confirmPasswordDK: registerPage.confirmPassword.value,
-  };
+  let userName = registerPage.username.value;
+  let phone = registerPage.phone.value;
+  let address = registerPage.address.value;
+  let emailDK = registerPage.email.value;
+  let passwordDK = registerPage.password.value;
+  let confirmPasswordDK = registerPage.confirmPassword.value;
   //   console.log(userName, phone, address, emailDK, passwordDK, confirmPasswordDK);
-  if (
-    (userName === "") &
-    (phone === "") &
-    (address === "") &
-    (emailDK === "") &
-    (passwordDK === "") &
-    (confirmPasswordDK === "")
-  ) {
-    errUserName.innerHTML = "Họ và tên không được bỏ trống";
-    errEmailDK.innerHTML = "Họ và tên không được bỏ trống";
-    errPhone.innerHTML = "Họ và tên không được bỏ trống";
-    errPassWord.innerHTML = "Họ và tên không được bỏ trống";
-    errAddress.innerHTML = "Họ và tên không được bỏ trống";
-    errConfirmPassWord.innerHTML = "Họ và tên không được bỏ trống";
-    errUserName.style.display = "block";
-  } else {
+  let errUserName = document.getElementById("err-userName");
+  let errEmail = document.getElementById("err-email");
+  let errPhone = document.getElementById("err-phone");
+  let errAddress = document.getElementById("err-address");
+  let errPassword = document.getElementById("err-password");
+  let errConfirm = document.getElementById("err-confirmPassword");
+  if (userName === "") {
   }
 });
