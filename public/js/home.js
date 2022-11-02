@@ -1,17 +1,22 @@
-let login = document.getElementById("btn-login");
+// let login = document.getElementById("btn-login");
 let info = document.getElementById("info");
 let edit = document.getElementById("edit-user");
 let update = document.getElementById("update");
 
-login.addEventListener("click", (e) => {
-  window.location.href = "http://localhost:3000/login";
-});
+// login.addEventListener("click", (e) => {
+//   window.location.href = "http://localhost:3000/login";
+// });
 
 info.addEventListener("click", (e) => {
-  edit.style.display = "block";
+  if (edit.classList.contains("off")) {
+    edit.classList.remove("off");
+  } else {
+    edit.classList.add("off");
+  }
 });
 
 update.addEventListener("click", (e) => {
+  console.log("haha");
   setTimeout(() => {
     window.location.href = "http://localhost:3000/user-info";
   }, 1000);

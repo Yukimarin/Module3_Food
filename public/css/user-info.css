@@ -37,6 +37,7 @@
     color: black !important;
 }
 
+/* tên đăng nhập */
 .container-fluid .register .btn-register{
     border:1px solid #EE4D2D;
     border-radius: 5px;
@@ -44,6 +45,102 @@
     height: 40px;
     color:#EE4D2D; 
     background:#F8F9FA;
+    display: none;
+}
+
+.container-fluid .info {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+    cursor: pointer;
+    /* display: none; */
+}
+
+.container-fluid .info .img-info{
+    width: 40px;
+    height: 40px;
+    /* border: 1px solid red; */
+}
+
+.container-fluid .info .img-info img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.container-fluid .info .name-info{
+    /* width: 100px; */
+    height: 40px;
+    /* border: 1px solid red; */
+    font-weight: bold;
+    line-height: 40px;
+}
+
+/* logout */
+.container-fluid .edit-user {
+    width: 200px;
+    /* height: 400px; */
+    border: 1px solid grey;
+    background-color: white;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    right: 30px;
+    top: 60px;
+    box-shadow: 0px 4px 9px -1px rgba(0,0,0,0.76);
+-webkit-box-shadow: 0px 4px 9px -1px rgba(0,0,0,0.76);
+-moz-box-shadow: 0px 4px 9px -1px rgba(0,0,0,0.76);
+   display: none;
+}
+
+.container-fluid .edit-user .bag {
+    /* width: 200px; */
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid grey;
+    cursor: pointer;
+}
+
+
+.container-fluid .edit-user .bag:hover{
+    background-color: #F5F5F5;
+}
+.container-fluid .edit-user .bag .fa-bag-shopping{
+    /* width: 200px; */
+    margin-left: 10px;
+    margin-right: 25px;
+    color: #6CC942
+}
+
+.container-fluid .edit-user .update {
+    /* width: 200px; */
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    border-bottom: 1px solid grey;
+}
+.container-fluid .edit-user .update:hover{
+    background-color: #F5F5F5;
+}
+.container-fluid .edit-user .update .fa-user-plus{
+    margin-left: 10px;
+    margin-right: 20px;
+    color: #E2963B;
+}
+.container-fluid .edit-user .logout{
+    /* width: 200px; */
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+}
+.container-fluid .edit-user .logout:hover{
+    background-color: #F5F5F5;
+}
+.container-fluid .edit-user .logout .fa-right-from-bracket{
+    margin-left: 10px;
+    margin-right: 23px;
+    color:#6D6F71;
 }
 /* Bottom */
 .user {
@@ -317,7 +414,6 @@
 .footer{
     /* border: 1px solid red; */
     background-color: #F2F2F2;
-    padding-top: 50px;
 }
 
 .footer .row-1{
@@ -326,10 +422,6 @@
     padding-top: 20px;
     margin-bottom: 30px
    
-}
-
-.footer .row-2{
-    background-color: #F2F2F2;
 }
 
 .footer .row-2 .col-4 ul li{
