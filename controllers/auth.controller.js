@@ -39,3 +39,12 @@ export const signin = async (req, res, next) => {
     next(err);
   }
 };
+
+export const signout = async (req, res, next) => {
+  try {
+    req.session = null;
+    return res.status(200).send({ message: "You've been signed out!" });
+  } catch (err) {
+    this.next(err);
+  }
+};

@@ -100,6 +100,7 @@
                   ><i class="fa-regular fa-envelope"></i
                 ></span>
                 <input
+                  id="input-email"
                   class="input-username"
                   type="text"
                   placeholder="Tên đăng nhập hoặc Email"
@@ -109,9 +110,8 @@
                 <span class="icon-lock"
                   ><i class="fa-sharp fa-solid fa-lock"></i
                 ></span>
-                <input class="input-pass" type="text" placeholder="Mật khẩu" />
+                <input id="input-pass" class="input-pass" type="password" placeholder="Mật khẩu" />
               </div>
-            </form>
           </div>
           <div class="forgot-pass">
             <div class="checkbox">
@@ -123,8 +123,10 @@
               <a href="">Quên Mật Khẩu?</a>
             </div>
           </div>
-          <button class="btn-submit">Đăng nhập</button>
+          <button id="btn-login" class="btn-submit">Đăng nhập</button>
           <br />
+        </form>
+
           <div class="login-mess-policy">
             Chúng tôi không sử dụng thông tin của bạn với bấn kỳ mục đích nào.
             Bằng cách đăng nhập hoặc đăng ký, bạn đồng ý với
