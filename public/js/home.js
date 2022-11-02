@@ -1,13 +1,18 @@
 let login = document.getElementById("btn-login");
 let info = document.getElementById("info");
 let edit = document.getElementById("edit-user");
+let update = document.getElementById("update");
 
-// login.addEventListener("click", (e) => {
-//   //   console.log("aaaaa");
-//   window.location.href = "http://localhost:3000/login";
-// });
+login.addEventListener("click", (e) => {
+  window.location.href = "http://localhost:3000/login";
+});
 
 info.addEventListener("click", (e) => {
-  console.log("haha");
   edit.style.display = "block";
+});
+
+update.addEventListener("click", (e) => {
+  setTimeout(() => {
+    window.location.href = "http://localhost:3000/user-info";
+  }, 1000);
 });

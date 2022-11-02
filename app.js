@@ -10,16 +10,6 @@ import restaurantRouter from "./routes/restaurant.routes.js";
 import authRouter from "./routes/auth.routes.js";
 import cookieParser from "cookie-parser";
 
-import ejs from "ejs";
-import mongoose from "mongoose";
-import dotenv from "dotenv";
-import userRouter from "./routes/users.routes.js";
-import menuRouter from "./routes/menu.routes.js";
-import restaurantRouter from "./routes/restaurant.routes.js";
-import authRouter from "./routes/auth.routes.js";
-import cookieParser from "cookie-parser";
-import Swal from "sweetalert2";
-
 dotenv.config();
 
 const connectMongoose = () => {
@@ -62,6 +52,10 @@ app.get("/register", (req, res) => {
 
 app.get("/restaurant", (req, res) => {
   res.render("restaurant");
+});
+
+app.get("/user-info", (req, res) => {
+  res.render("user-info");
 });
 
 app.listen(port, () => {

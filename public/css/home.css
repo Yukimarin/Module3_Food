@@ -45,14 +45,15 @@
     height: 40px;
     color:#EE4D2D; 
     background:#F8F9FA;
-    display: none;
 }
+
 .container-fluid .info {
     width: 150px;
     display: flex;
     justify-content: space-between;
     margin-right: 30px;
     cursor: pointer;
+    display: none;
 }
 
 .container-fluid .info .img-info{
