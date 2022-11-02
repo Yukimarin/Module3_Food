@@ -37,6 +37,7 @@
     color: black !important;
 }
 
+/* tên đăng nhập */
 .container-fluid .register .btn-register{
     border:1px solid #EE4D2D;
     border-radius: 5px;
@@ -44,11 +45,181 @@
     height: 40px;
     color:#EE4D2D; 
     background:#F8F9FA;
+    display: none;
+}
+.container-fluid .info {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.container-fluid .info .img-info{
+    width: 40px;
+    height: 40px;
+    /* border: 1px solid red; */
+}
+
+.container-fluid .info .img-info img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.container-fluid .info .name-info{
+    /* width: 100px; */
+    height: 40px;
+    /* border: 1px solid red; */
+    font-weight: bold;
+    line-height: 40px;
+}
+
+/* logout */
+.container-fluid .edit-user {
+    width: 200px;
+    /* height: 400px; */
+    border: 1px solid grey;
+    background-color: white;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    right: 30px;
+    top: 60px;
+    box-shadow: 0px 4px 9px -1px rgba(0,0,0,0.76);
+-webkit-box-shadow: 0px 4px 9px -1px rgba(0,0,0,0.76);
+-moz-box-shadow: 0px 4px 9px -1px rgba(0,0,0,0.76);
+   display: none;
+}
+
+.container-fluid .edit-user .bag {
+    /* width: 200px; */
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid grey;
+    cursor: pointer;
+}
+
+
+.container-fluid .edit-user .bag:hover{
+    background-color: #F5F5F5;
+}
+.container-fluid .edit-user .bag .fa-bag-shopping{
+    /* width: 200px; */
+    margin-left: 10px;
+    margin-right: 25px;
+    color: #6CC942
+}
+
+.container-fluid .edit-user .update {
+    /* width: 200px; */
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    border-bottom: 1px solid grey;
+}
+.container-fluid .edit-user .update:hover{
+    background-color: #F5F5F5;
+}
+.container-fluid .edit-user .update .fa-user-plus{
+    margin-left: 10px;
+    margin-right: 20px;
+    color: #E2963B;
+}
+.container-fluid .edit-user .logout{
+    /* width: 200px; */
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+}
+.container-fluid .edit-user .logout:hover{
+    background-color: #F5F5F5;
+}
+.container-fluid .edit-user .logout .fa-right-from-bracket{
+    margin-left: 10px;
+    margin-right: 23px;
+    color:#6D6F71;
 }
 /* Bottom */
-.bottom {
-   background-image:url(./city.jpg)
+.model-box {
+    padding: 0px 10px;
+    margin-top: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    color: grey;
+    font-size: xx-large;
+    font-weight: bold;
 }
+
+.model-box .product-men{
+    margin-left: 10px;
+    margin-right: 20px;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.model-box .product-men .section-product{
+    width: 180px;
+    height: 300px;
+}
+
+.section-product .product-picture {
+    width: 100%;
+    height: 60%;
+    position: relative;
+    transition: all 0.5 ease-in-out;
+    overflow: hidden;
+}
+
+.product-picture .like{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: small;
+    border: none;
+    background-color: #F6F6F6;
+}
+.section-product .product-picture img{
+    width: 100%;
+    height: 100%;
+}
+
+.product-row:hover img{
+    transform: scale(1.2);
+    opacity: 0.7;
+}
+
+.section-product .description{
+    padding: 10px 10px;
+    font-size: small;
+    font-weight: bold;
+    text-align: left;
+    color:black
+}
+
+.section-product .description .address{
+   font-weight: lighter;
+   font-style: italic;
+}
+
+.section-product .button-buy{
+    background-color: black;
+    color: white;
+    font-size: small;
+    border-radius: 5px;
+    display: none;
+}
+
+.section-product .button-buy a{
+    text-decoration: none;
+    color: white;
+}
+
+.product-men .section-product:hover .button-buy{
+    display: inline-block;
+}
+
 
 /* Footer partner */
 .step-order{
@@ -80,7 +251,7 @@
 .partner .image {
     position: absolute;
     /* width: 300px; */
-    top:585px;
+    top: 3970px;
     left: 830px;
     height: 330px;
     /* border: 1px solid red; */
@@ -100,7 +271,7 @@
 .other-partner .image {
     position: absolute;
     width: 250px;
-    top:1025px;
+    top:4413px;
     left: 860px;
     height: 290px;
     /* border: 1px solid red; */

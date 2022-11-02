@@ -4,6 +4,8 @@ const api = "http://localhost:3000";
 
 const login = document.getElementById("btn-login");
 let dk = document.getElementById("btn-dk");
+let submit = document.getElementById("btn-submit");
+// dieu huong register
 dk.addEventListener("click", (e) => {
   console.log("hahah");
   window.location.href = "/register";
@@ -25,4 +27,10 @@ login.addEventListener("click", (e) => {
     .then((res) => res.json())
     .then((data) => console.log(data))
     .catch((err) => console.log(err));
+});
+
+// dieu huong home
+submit.addEventListener("click", (e) => {
+  console.log("haha");
+  window.location.href = "http://localhost:3000/";
 });

@@ -194,7 +194,7 @@
 
 .form-login .username .icon-mail {
     position: absolute;
-    top: 365px;
+    top: 405px;
     left: 375px;
     color:#9FA9AA;
 }
@@ -207,7 +207,7 @@
 
 .form-login .pass .icon-lock {
     position: absolute;
-    top: 405px;
+    top: 445px;
     left: 375px;
     color:#9FA9AA;
 }

@@ -79,6 +79,7 @@
               class="username field"
               required
             />
+            <div class="color-err" id="err-userName"></div>
             <div class="email">
               <label for="email"><b>Email*</b></label>
             </div>
@@ -90,6 +91,7 @@
               class="email field"
               required
             />
+            <div class="color-err" id="err-email"></div>
             <div class="Phone">
               <label for="phone"><b>Số điện thoại*</b></label>
             </div>
@@ -101,6 +103,7 @@
               class="phone field"
               required
             />
+            <div class="color-err" id="err-phone"></div>
             <div class="Address">
               <label for="address"><b>Địa chỉ*</b></label>
             </div>
@@ -112,6 +115,7 @@
               class="address field"
               required
             />
+            <div class="color-err" id="err-address"></div>
             <div class="password">
               <label for="password"><b>Mật khẩu*</b></label>
             </div>
@@ -123,6 +127,7 @@
               class="password field"
               required
             />
+            <div class="color-err" id="err-password"></div>
             <div class="confirm-password">
               <label for="confirm-password"><b>Xác nhận mật khẩu*</b></label>
             </div>
@@ -134,15 +139,15 @@
               class="confirm-password field"
               required
             />
+            <div class="color-err" id="err-confirmPassword"></div>
             <div class="login-mess-policy">
-              <input type="checkbox" required/><span class="check-text"></span>
-                Chúng tôi không sử dụng thông tin của bạn với bấm kỳ mục đích nào.
-                Bằng cách đăng nhập hoặc đăng ký, bạn đồng ý với</span
+              <span class="check-text">
+                Chúng tôi không sử dụng thông tin của bạn với bấm kỳ mục đích
+                nào. Bằng cách đăng nhập hoặc đăng ký, bạn đồng ý với</span
               >
               <a href="">Chính sách quy định của OrderFood</a>
             </div>
-            <div class="alert alert-danger"></div>
-            <button id="btn-sumit" class="btn-submit">Đăng ký</button>
+            <button id="btn-submit" class="btn-submit">Đăng ký</button>
           </form>
         </div>
       </div>
@@ -212,6 +217,7 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
+    <script src="sweetalert2.all.min.js"></script>
     <script src="/js/register.js"></script>
   </body>
 </html>
