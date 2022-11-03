@@ -106,7 +106,7 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body bag-food">
+          <div id="bags" class="modal-body bag-food">
             <div class="bag-detail-menu">
               <div class="bag-img-food">
                 <img
@@ -115,17 +115,18 @@
                 />
               </div>
               <div class="bag-name-food">Min Kee - Mì Khô & Trà Hong Kong</div>
-              <div class="bag-number-food">
+              <div id="bag-number" class="bag-number-food">
                 <span
-                  ><button class="btn-quantity">-</button> 1
-                  <button class="btn-quantity">+</button></span
-                >
+                  ><button id="btn-minus" class="btn-quantity">-</button>
+                  <span id="quantity">1</span>
+                  <button id="btn-plus" class="btn-quantity">+</button>
+                </span>
               </div>
-              <div class="bag-price-food">35,000</div>
+              <div id="price" class="bag-price-food">35,000</div>
             </div>
           </div>
           <div class="modal-footer">
-            <div class="total">Tổng tiền: 35,000 VNĐ</div>
+            <div id="total-price" class="total">Tổng tiền: 35,000 VNĐ</div>
             <div>
               <button
                 id="purchase"

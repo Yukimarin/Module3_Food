@@ -363,6 +363,7 @@
     /* border: 1px solid red; */
     margin: 10px 10px;
     line-height: 40px;
+    font-size: 13px;
 }
 
 .bag-food .bag-detail-menu .bag-number-food .btn-quantity{
