@@ -62,6 +62,10 @@ app.get("/admin", (req, res) => {
   res.render("admin");
 });
 
+app.get("/purchase", (req, res) => {
+  res.render("purchase");
+});
+
 app.listen(port, () => {
   connectMongoose();
   console.log("hello world");

@@ -70,10 +70,16 @@ submit.addEventListener("click", (e) => {
               errConfirm.style.display = "block";
             } else {
               errConfirm.style.display = "none";
-              alert("Chúc mừng bạn đã tạo thành công tài khoản OrderFood");
+              Swal.fire({
+                icon: "success",
+                title: "Chúc mừng bạn đã tạo thành công tài khoản OrderFood",
+                showConfirmButton: false,
+                timer: 1500,
+              });
+              // alert("Chúc mừng bạn đã tạo thành công tài khoản OrderFood");
               setTimeout(() => {
                 window.location.href = "http://localhost:3000/login";
-              }, 2000);
+              }, 1000);
             }
           }
         }

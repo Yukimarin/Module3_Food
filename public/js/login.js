@@ -33,5 +33,13 @@ dk.addEventListener("click", (e) => {
 login.addEventListener("click", (e) => {
   // console.log("haha");
   e.preventDefault();
-  window.location.href = "http://localhost:3000";
+  Swal.fire({
+    icon: "success",
+    title: "Đăng nhập thành công",
+    showConfirmButton: false,
+    timer: 2000,
+  });
+  setTimeout(() => {
+    window.location.href = "http://localhost:3000";
+  }, 3000);
 });
