@@ -7,10 +7,9 @@ const restaurantSchema = new mongoose.Schema(
       require: true,
       unique: true,
     },
-    username: {
+    nameRestaurant: {
       type: String,
       require: true,
-      unique: true,
     },
     password: {
       type: String,
@@ -29,12 +28,16 @@ const restaurantSchema = new mongoose.Schema(
     wallet: {
       type: String,
       require: true,
-      unique: true,
     },
-    restaurant: {
+    category: {
       type: String,
       require: true,
-      unique: true,
+    },
+    image: {
+      type: String,
+    },
+    status: {
+      type: Number,
     },
   },
   { timestamps: true }

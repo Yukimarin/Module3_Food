@@ -23,14 +23,15 @@ const userSchema = new mongoose.Schema(
     address: {
       type: String,
       require: true,
-      unique: true,
     },
     wallet: {
       type: String,
       require: true,
-      unique: true,
     },
     image: {
+      type: String,
+    },
+    role: {
       type: String,
     },
     status: {

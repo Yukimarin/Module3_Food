@@ -7,7 +7,6 @@ let dk = document.getElementById("btn-dk");
 
 // dieu huong register
 dk.addEventListener("click", (e) => {
-  console.log("hahah");
   window.location.href = "http://localhost:3000/register";
 });
 // login.addEventListener("click", (e) => {

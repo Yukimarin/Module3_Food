@@ -2,28 +2,31 @@ import mongoose from "mongoose";
 
 const menuSchema = new mongoose.Schema(
   {
+    phone: {
+      type: String,
+      require: true,
+      unique: true,
+    },
+    nameRestaurant: {
+      type: String,
+      require: true,
+      unique: true,
+    },
+    category: {
+      type: Number,
+    },
     foodname: {
       type: String,
-      require: true,
-      unique: true,
-    },
-    decription: {
-      type: String,
-      require: true,
-      unique: true,
     },
     price: {
-      type: Number,
+      type: String,
+      require: true,
     },
     image: {
       type: String,
-    },
-    category: {
-      type: String,
       require: true,
-      unique: true,
     },
-    restaurant: {
+    address: {
       type: String,
       require: true,
       unique: true,

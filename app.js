@@ -8,6 +8,8 @@ import userRouter from "./routes/users.routes.js";
 import menuRouter from "./routes/menu.routes.js";
 import restaurantRouter from "./routes/restaurant.routes.js";
 import authRouter from "./routes/auth.routes.js";
+import homeRouter from "./routes/home.routes.js";
+import adminRouter from "./routes/admin.routes.js";
 import cookieParser from "cookie-parser";
 
 dotenv.config();
@@ -34,37 +36,8 @@ app.use("/users", userRouter);
 app.use("/menu", menuRouter);
 app.use("/restaurant", restaurantRouter);
 app.use("/auth", authRouter);
-
-app.get("/", (req, res) => {
-  res.render("home");
-});
-app.get("/admin", (req, res) => {
-  res.render("admin");
-});
-
-app.get("/login", (req, res) => {
-  res.render("login");
-});
-
-app.get("/register", (req, res) => {
-  res.render("register");
-});
-
-app.get("/menu", (req, res) => {
-  res.render("menu");
-});
-
-app.get("/user-info", (req, res) => {
-  res.render("user-info");
-});
-
-app.get("/admin", (req, res) => {
-  res.render("admin");
-});
-
-app.get("/purchase", (req, res) => {
-  res.render("purchase");
-});
+app.use("/", homeRouter);
+app.use("/admin", adminRouter);
 
 app.listen(port, () => {
   connectMongoose();

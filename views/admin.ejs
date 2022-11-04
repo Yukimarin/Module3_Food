@@ -118,29 +118,33 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Bách Nguyễn</td>
-            <td>0904662012</td>
-            <td>bachnx1991@gmail.com</td>
-            <td>bach123456</td>
-            <td>Tòa nhà Sông Đà</td>
-            <td>370,000 VND</td>
-            <td>Ảnh</td>
-            <td>Admin</td>
-            <td>Online</td>
-            <td class="action">
-              <span
-                class="btn-delete-blogs btn btn-danger"
-              >
-                <ion-icon name="trash-outline"></ion-icon>
-              </span>
-              <span
-                        class="btn-update-blogs btn btn-info"
-              >
-                <ion-icon name="build-outline"></ion-icon>
-              </span>
-            </td>
-          </tr>
+          <% for (let i = 0; i < userList.length; i++) {%>
+          
+            <tr>
+              <td><%= userList[i].username %></td>
+              <td><%= userList[i].phone %></td>
+              <td><%= userList[i].email %></td>
+              <td><%= userList[i].password %></td>
+              <td><%= userList[i].address %></td>
+              <td><%= userList[i].wallet %></td>
+              <td><%= userList[i].image %></td>
+              <td><%= userList[i].role %></td>
+              <td><%= userList[i].status %></td>
+              <td class="action">
+                <span
+                  class="btn-delete-blogs btn btn-danger"
+                >
+                  <ion-icon name="trash-outline"></ion-icon>
+                </span>
+                <span
+                          class="btn-update-blogs btn btn-info"
+                >
+                  <ion-icon name="build-outline"></ion-icon>
+                </span>
+              </td>
+            </tr>
+          <% } %> 
+            
         </tbody>
       </table>
             </div>
@@ -226,29 +230,32 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>0904662012</td>
-          <td>Cơm rang dưa bò Đức Hạnh</td>
-          <td>bach123456</td>
-          <td>Cơm rang</td>
-          <td>Cơm rang dưa bò</td>
-          <td>100 điểm</td>
-          <td>370,000 VND</td>
-          <td>Ảnh</td>
-          <td>38 Mã Mây, Hoàn Kiếm, Hà Nội</td>
-          <td class="action">
-            <span
-              class="btn-delete-blogs btn btn-danger"
-            >
-              <ion-icon name="trash-outline"></ion-icon>
-            </span>
-            <span
-              class="btn-update-blogs btn btn-info"
-            >
-              <ion-icon name="build-outline"></ion-icon>
-            </span>
-          </td>
-        </tr>
+        <% for (let i = 0; i < menuList.length; i++) {%>
+          
+          <tr>
+            <td><%= menuList[i].phone %></td>
+            <td><%= menuList[i].nameRestaurant %></td>
+            <td><%= menuList[i].password %></td>
+            <td><%= menuList[i].category %></td>
+            <td><%= menuList[i].foodname %></td>
+            <td><%= menuList[i].opinion %></td>
+            <td><%= menuList[i].price %></td>
+            <td><%= menuList[i].img %></td>
+            <td><%= menuList[i].address %></td>
+            <td class="action">
+              <span
+                class="btn-delete-blogs btn btn-danger"
+              >
+                <ion-icon name="trash-outline"></ion-icon>
+              </span>
+              <span
+                        class="btn-update-blogs btn btn-info"
+              >
+                <ion-icon name="build-outline"></ion-icon>
+              </span>
+            </td>
+          </tr>
+        <% } %> 
       </tbody>
     </table>
           </div>
