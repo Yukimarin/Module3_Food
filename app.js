@@ -50,8 +50,8 @@ app.get("/register", (req, res) => {
   res.render("register");
 });
 
-app.get("/restaurant", (req, res) => {
-  res.render("restaurant");
+app.get("/menu", (req, res) => {
+  res.render("menu");
 });
 
 app.get("/user-info", (req, res) => {
