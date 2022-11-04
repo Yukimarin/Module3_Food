@@ -66,6 +66,10 @@ app.get("/purchase", (req, res) => {
   res.render("purchase");
 });
 
+app.get("/purchase-history", (req, res) => {
+  res.render("purchase-history");
+});
+
 app.listen(port, () => {
   connectMongoose();
   console.log("hello world");
