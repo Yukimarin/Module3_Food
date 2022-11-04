@@ -4,8 +4,8 @@ const router = express.Router();
 router.get("/", (req, res) => {
   res.render("home");
 });
-router.get("/menu", (req, res) => {
-  res.render("menu");
+router.get("/food", (req, res) => {
+  res.render("food");
 });
 router.get("/user-info", (req, res) => {
   res.render("user-info");

@@ -6,7 +6,7 @@ const UserSchema = new Schema({
     type: String,
   },
 });
-const MenuSchema = new Schema({
+const FoodSchema = new Schema({
   name: {
     type: String,
   },
@@ -17,8 +17,8 @@ const RestaurantSchema = new Schema({
   },
 });
 const user = mongoose.model("User", UserSchema);
-const menu = mongoose.model("Menu", MenuSchema);
-const restaurant = mongoose.model("Restaurant", MenuSchema);
+const food = mongoose.model("Food", FoodSchema);
+const restaurant = mongoose.model("Restaurant", FoodSchema);
 
 export const update = async (req, res, next) => {
   if (req.params.id === req.user.id) {
@@ -42,8 +42,8 @@ export const show = async (req, res, next) => {
   try {
     let users = await user.find({});
     let usersData = users.map((user) => user.toObject());
-    let menus = await menu.find({});
-    let menusData = menus.map((menu) => menu.toObject());
+    let foods = await food.find({});
+    let foodsData = foods.map((food) => food.toObject());
     let restaurants = await restaurant.find({});
     let restaurantsData = restaurants.map((restaurant) =>
       restaurant.toObject()
@@ -51,7 +51,7 @@ export const show = async (req, res, next) => {
 
     res.render("admin", {
       userList: usersData,
-      menuList: menusData,
+      foodList: foodsData,
       restaurantList: restaurantsData,
     });
   } catch (error) {

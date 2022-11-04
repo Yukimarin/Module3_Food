@@ -1,3 +1,4 @@
+import { Timestamp } from "mongodb";
 import mongoose from "mongoose";
 
 const restaurantSchema = new mongoose.Schema(
@@ -23,7 +24,6 @@ const restaurantSchema = new mongoose.Schema(
     address: {
       type: String,
       require: true,
-      unique: true,
     },
     wallet: {
       type: String,
@@ -37,7 +37,14 @@ const restaurantSchema = new mongoose.Schema(
       type: String,
     },
     status: {
+      require: true,
       type: Number,
+    },
+    opentime: {
+      type: String,
+    },
+    closetime: {
+      type: String,
     },
   },
   { timestamps: true }

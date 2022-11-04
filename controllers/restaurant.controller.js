@@ -36,7 +36,7 @@ export const loginRestaurant = async (req, res, next) => {
         httpOnly: true,
       })
       .status(200)
-      .json({ code: 0 });
+      .send({ message: " Đăng nhập thành công" });
   } catch (err) {
     next(err);
   }

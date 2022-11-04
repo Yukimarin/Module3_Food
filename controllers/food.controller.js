@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
-import Menu from "../models/menu.model.js";
+import Food from "../models/food.model.js";
 
 export const createFood = async (req, res, next) => {
   try {
-    const menu = await Menu.create(req.body);
+    const food = await Food.create(req.body);
     res.status(200).send("Food has been created");
   } catch (err) {
     next(err);
@@ -11,12 +11,12 @@ export const createFood = async (req, res, next) => {
 };
 
 export const update = async (req, res, next) => {
-  const menu = await Menu.findById(req.params.id);
-  console.log(menu);
-  if (menu) {
+  const food = await Food.findById(req.params.id);
+  console.log(food);
+  if (food) {
     try {
-      const updatemenu = await Menu.findByIdAndUpdate(
-        menu.id,
+      const updatefood = await Food.findByIdAndUpdate(
+        food.id,
         {
           $set: {
             ...req.body,
@@ -24,7 +24,7 @@ export const update = async (req, res, next) => {
         },
         { new: true }
       );
-      res.status(200).json(updatemenu);
+      res.status(200).json(updatefood);
     } catch (err) {
       next(err);
     }
@@ -35,7 +35,7 @@ export const update = async (req, res, next) => {
 
 // export const create = async ( req, res, next ) => {
 //     try {
-//     const Menu = aw
+//     const Food = aw
 //     }catch (err) {
 //         next(err)
 //     }
