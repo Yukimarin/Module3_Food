@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-export const userSchema = new mongoose.Schema(
+const userSchema = new mongoose.Schema(
   {
     phone: {
       type: Number,
@@ -10,7 +10,6 @@ export const userSchema = new mongoose.Schema(
     username: {
       type: String,
       require: true,
-      unique: true,
     },
     email: {
       type: String,
@@ -25,13 +24,10 @@ export const userSchema = new mongoose.Schema(
       require: true,
     },
     wallet: {
-      type: String,
+      type: Number,
       require: true,
     },
     image: {
-      type: String,
-    },
-    role: {
       type: String,
     },
     status: {
