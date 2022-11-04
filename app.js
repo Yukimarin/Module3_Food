@@ -11,6 +11,7 @@ import authRouter from "./routes/auth.routes.js";
 import homeRouter from "./routes/home.routes.js";
 import adminRouter from "./routes/admin.routes.js";
 import cookieParser from "cookie-parser";
+import authorize from "./middlewares/authorize.js";
 
 dotenv.config();
 
@@ -37,6 +38,7 @@ app.use("/menu", menuRouter);
 app.use("/restaurant", restaurantRouter);
 app.use("/auth", authRouter);
 app.use("/", homeRouter);
+// app.use("/admin", authorize("admin"), adminRouter);
 app.use("/admin", adminRouter);
 
 app.get("/purchase-history", (req, res) => {

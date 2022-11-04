@@ -31,6 +31,9 @@ const menuSchema = new mongoose.Schema(
       require: true,
       unique: true,
     },
+    userID: {
+      type: String,
+    },
   },
   { timestamps: true }
 );

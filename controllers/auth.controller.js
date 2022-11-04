@@ -19,22 +19,19 @@ export const signup = async (req, res, next) => {
 export const signin = async (req, res, next) => {
   try {
     const user = await User.findOne({ email: req.body.email });
-    // console.log(user);
-    // console.log(user.status);
     if (!user) return next(404, "User not found!");
     if (user.status === 0) return res.status(500).send("deo cho dang nhap day");
     const isCorrect = bcrypt.compare(req.body.password, user.password);
     if (!isCorrect) return next(400, "Wrong Credentials!");
 
-    const token = jwt.sign({ id: user._id }, process.env.JWT);
-    const { password, ...others } = user._doc;
+    const token = jwt.sign({ id: user._id, role: user.role }, process.env.JWT);
 
     res
       .cookie("access_token", token, {
         httpOnly: true,
       })
       .status(200)
-      .json("others");
+      .send("dang nhap thanh cong");
   } catch (err) {
     next(err);
   }

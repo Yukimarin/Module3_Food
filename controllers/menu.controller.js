@@ -9,3 +9,11 @@ export const createFood = async (req, res, next) => {
     next(err);
   }
 };
+
+export const create = async ({
+    street: "100 Maple Street",
+    city: "Fort Townville,
+    state: "New West Virgota",
+    zip: "77777"
+    owner: {name: "Alex Merced"}
+})
