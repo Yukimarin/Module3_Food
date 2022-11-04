@@ -10,10 +10,34 @@ export const createFood = async (req, res, next) => {
   }
 };
 
-export const create = async ({
-    street: "100 Maple Street",
-    city: "Fort Townville,
-    state: "New West Virgota",
-    zip: "77777"
-    owner: {name: "Alex Merced"}
-})
+export const update = async (req, res, next) => {
+  const menu = await Menu.findById(req.params.id);
+  console.log(menu);
+  if (menu) {
+    try {
+      const updatemenu = await Menu.findByIdAndUpdate(
+        menu.id,
+        {
+          $set: {
+            ...req.body,
+          },
+        },
+        { new: true }
+      );
+      res.status(200).json(updatemenu);
+    } catch (err) {
+      next(err);
+    }
+  } else {
+    return next(403, { message: "You can update account!" });
+  }
+};
+
+// export const create = async ( req, res, next ) => {
+//     try {
+//     const Menu = aw
+//     }catch (err) {
+//         next(err)
+//     }
+
+// }

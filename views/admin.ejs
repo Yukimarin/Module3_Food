@@ -82,6 +82,10 @@
           <i class="bx bx-menu sidebarBtn"></i>
           <span class="dashboard">Dashboard</span>
         </div>
+        <div class="search-box">
+          <input type="text" placeholder="Search..." />
+          <i class="bx bx-search"></i>
+        </div>
         <div class="profile-details">
           <!--<img src="images/profile.jpg" alt="">-->
           <span class="admin_name">Prem Shahi</span>
@@ -172,29 +176,32 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Bách Nguyễn</td>
-            <td>Phở Phố Cổ</td>
-            <td>9:00</td>
-            <td>23:00</td>
-            <td>Tòa nhà Sông Đà</td>
-            <td>Lẩu</td>
-            <td>Ảnh</td>
-            <td>Lẩu gầu bò</td>
-            <td>300,000 VND</td>
-            <td class="action">
-              <span
-                class="btn-delete-blogs btn btn-danger"
-              >
-                <ion-icon name="trash-outline"></ion-icon>
-              </span>
-              <span
-                        class="btn-update-blogs btn btn-info"
-              >
-                <ion-icon name="build-outline"></ion-icon>
-              </span>
-            </td>
-          </tr>
+          <% for (let i = 0; i < restaurantList.length; i++) {%>
+          
+            <tr>
+              <td><%= restaurantList[i].username %></td>
+              <td><%= restaurantList[i].phone %></td>
+              <td><%= restaurantList[i].email %></td>
+              <td><%= restaurantList[i].password %></td>
+              <td><%= restaurantList[i].address %></td>
+              <td><%= restaurantList[i].wallet %></td>
+              <td><%= restaurantList[i].image %></td>
+              <td><%= restaurantList[i].role %></td>
+              <td><%= restaurantList[i].status %></td>
+              <td class="action">
+                <span
+                  class="btn-delete-blogs btn btn-danger"
+                >
+                  <ion-icon name="trash-outline"></ion-icon>
+                </span>
+                <span
+                          class="btn-update-blogs btn btn-info"
+                >
+                  <ion-icon name="build-outline"></ion-icon>
+                </span>
+              </td>
+            </tr>
+          <% } %> 
         </tbody>
       </table>
             </div>
