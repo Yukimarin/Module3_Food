@@ -39,6 +39,10 @@ app.use("/auth", authRouter);
 app.use("/", homeRouter);
 app.use("/admin", adminRouter);
 
+app.get("/purchase-history", (req, res) => {
+  res.render("purchase-history");
+});
+
 app.listen(port, () => {
   connectMongoose();
   console.log("hello world");
