@@ -33,6 +33,18 @@ export const update = async (req, res, next) => {
   }
 };
 
+export const del = async (req, res, next) => {
+  try {
+    const food = await Food.findById(req.params.id);
+    if (!food) return next(404, " food not found");
+    if (req.user.id === food.user.id) {
+      await Food.findByIdAndDelete(req.params.id);
+      res.status(200).send("The food was deleted");
+    }
+  } catch (err) {
+    next(err);
+  }
+};
 // export const create = async ( req, res, next ) => {
 //     try {
 //     const Food = aw
