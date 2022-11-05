@@ -4,4 +4,6 @@ const router = express.Router();
 
 router.get("/", show);
 router.get("/restaurant", update);
+router.get("/login");
+
 export default router;
