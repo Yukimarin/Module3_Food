@@ -145,6 +145,12 @@
     color:#6D6F71;
 }
 /* Bottom */
+.banner {
+    background-image: url(https://shopeefood.vn/app/assets/img/main-banner.jpg?45bff8c9ec408a5ba51f9fdef662324e);
+    color: white;
+}
+
+
 .tittle {
     color: grey;
     font-size: x-large;
@@ -179,7 +185,7 @@
 
 .item:hover .button-buy{
     transition-duration: 0.5s;
-    display: inline-block;
+    display: inline;
 }
 
 

@@ -29,7 +29,7 @@ purchase.addEventListener("click", (e) => {
   }, 1000);
 });
 
-// dom them gio hang
+// thêm số lượng trong giỏ hàng
 let minus = document.getElementById("btn-minus");
 let add = document.getElementById("btn-plus");
 let quantity = document.getElementById("quantity");
@@ -49,6 +49,9 @@ add.onclick = function () {
   giaTri = `${Number(giaTri) + 1}`;
   quantity.innerText = giaTri;
 };
+// Thêm giỏ hàng
+let addBags = document.getElementById("btn-add-bags");
+addBags.addEventListener("click")
 
 // scroll to top
 //Get the button
