@@ -1,4 +1,3 @@
-import { Timestamp } from "mongodb";
 import mongoose from "mongoose";
 
 const restaurantSchema = new mongoose.Schema(
@@ -46,6 +45,13 @@ const restaurantSchema = new mongoose.Schema(
     closetime: {
       type: String,
     },
+
+    foods: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Food",
+      },
+    ],
   },
   { timestamps: true }
 );

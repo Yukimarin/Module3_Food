@@ -1,9 +1,16 @@
 import mongoose from "mongoose";
 import Food from "../models/food.model.js";
+import Restaurant from "../models/restaurant.model.js";
 
 export const createFood = async (req, res, next) => {
   try {
     const food = await Food.create(req.body);
+    const updatedRestaurant = await Restaurant.findByIdAndUpdate(
+      req.body.restaurant,
+      { $push: { foods: food.id } },
+      { new: true, useFindAndModify: false }
+    );
+
     res.status(200).send("Food has been created");
   } catch (err) {
     next(err);

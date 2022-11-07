@@ -10,7 +10,7 @@ export const signup = async (req, res, next) => {
     const newUser = new User({ ...req.body, password: hash });
 
     await newUser.save();
-    res.status(200).send("User has been created!");
+    res.status(200).send({ message: "User has been created!" });
   } catch (err) {
     next(err);
   }
@@ -21,7 +21,8 @@ export const signin = async (req, res, next) => {
     const user = await User.findOne({ email: req.body.email });
     if (!user) return next(404, "User not found!");
     if (user.status === 0) return res.status(500).send("deo cho dang nhap day");
-    const isCorrect = bcrypt.compare(req.body.password, user.password);
+    const isCorrect = await bcrypt.compare(req.body.password, user.password);
+
     if (!isCorrect) return next(400, "Wrong Credentials!");
 
     const token = jwt.sign({ id: user._id, role: user.role }, process.env.JWT);
@@ -31,16 +32,20 @@ export const signin = async (req, res, next) => {
         httpOnly: true,
       })
       .status(200)
-      .send("dang nhap thanh cong");
+      .send({ message: "Login successfully!" });
   } catch (err) {
     next(err);
   }
 };
 
-export const signout = async (req, res, next) => {
+export const logout = (req, res) => {
   try {
-    req.session = null;
-    return res.status(200).send({ message: "You've been signed out!" });
+    res
+      .cookie("access_token", "", {
+        httpOnly: true,
+      })
+      .status(200)
+      .send({ message: "Logout successfully!" });
   } catch (err) {
     this.next(err);
   }

@@ -3,6 +3,15 @@ import Restaurant from "../models/restaurant.model.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
+export const index = async (req, res, next) => {
+  try {
+    const restaurants = await Restaurant.find().populate("foods");
+    res.status(200).send(restaurants);
+  } catch (err) {
+    next(err);
+  }
+};
+
 export const cretaeRestaurant = async (req, res, next) => {
   try {
     const salt = bcrypt.genSaltSync(10);

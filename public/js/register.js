@@ -1,4 +1,5 @@
 let submit = document.getElementById("btn-submit");
+const api = "http://localhost:3000";
 
 submit.addEventListener("click", (e) => {
   e.preventDefault();
@@ -70,16 +71,36 @@ submit.addEventListener("click", (e) => {
               errConfirm.style.display = "block";
             } else {
               errConfirm.style.display = "none";
-              Swal.fire({
-                icon: "success",
-                title: "Chúc mừng bạn đã tạo thành công tài khoản OrderFood",
-                showConfirmButton: false,
-                timer: 1500,
-              });
-              // alert("Chúc mừng bạn đã tạo thành công tài khoản OrderFood");
-              setTimeout(() => {
-                window.location.href = "http://localhost:3000/login";
-              }, 1000);
+              fetch(api + "/auth/signup", {
+                method: "POST",
+                headers: {
+                  "content-type": "application/json",
+                },
+                body: JSON.stringify({
+                  username: userName,
+                  phone,
+                  address,
+                  email: emailDK,
+                  password: passwordDK,
+                }),
+              })
+                .then((res) => res.json())
+                .then((data) => {
+                  Swal.fire({
+                    icon: "success",
+                    title:
+                      "Chúc mừng bạn đã tạo thành công tài khoản OrderFood",
+                    showConfirmButton: false,
+                    timer: 1500,
+                  });
+
+                  setTimeout(() => {
+                    window.location.href = api + "/login";
+                  }, 1000);
+                })
+                .catch((err) => {
+                  console.log(err);
+                });
             }
           }
         }

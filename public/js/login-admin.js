@@ -1,10 +1,11 @@
-let login = document.getElementById("btn-login");
+const api = "http://localhost:3000";
+let login = document.getElementById("loginform");
 
-login.addEventListener("click", (e) => {
+login.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log("haha");
-  let email = loginform.email.value;
-  let password = loginform.password.value;
+  const email = login.email.value;
+  const password = login.password.value;
+
   let errEmail = document.getElementById("err-email");
   let errPassword = document.getElementById("err-password");
   if (email === "") {
@@ -17,16 +18,34 @@ login.addEventListener("click", (e) => {
       errEmail.style.display = "none";
       errPassword.style.display = "block";
       errPassword.style.color = "red";
-    } else {
+    }
+  }
+  let data = {
+    email,
+    password,
+  };
+
+  fetch(api + "/auth/login-admin", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+    .then((res) => res.json())
+    .then((data) => {
       Swal.fire({
         icon: "success",
-        title: "Đăng nhập thành công",
+        title: data.message,
         showConfirmButton: false,
         timer: 2000,
       });
+
       setTimeout(() => {
-        window.location.href = "http://localhost:300/admin";
+        window.location.href = "http://localhost:3000/admin";
       }, 3000);
-    }
-  }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });

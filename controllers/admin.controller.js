@@ -38,6 +38,30 @@ export const update = async (req, res, next) => {
     return next(403, { message: "You can update account!" });
   }
 };
+
+export const signin = async (req, res, next) => {
+  try {
+    const user = await User.findOne({ email: req.body.email });
+    if (!user) return next(404, "User not found!");
+    if (user.status === 0) return res.status(500).send("deo cho dang nhap day");
+    const isCorrect = bcrypt.compare(req.body.password, user.password);
+    if (!isCorrect) return next(400, "Wrong Credentials!");
+
+    const token = jwt.sign({ id: user._id, role: user.role }, process.env.JWT);
+
+    res
+      .cookie("access_token", token, {
+        httpOnly: true,
+      })
+      .status(200)
+      .json({
+        status: "sucess",
+      });
+  } catch (err) {
+    next(err);
+  }
+};
+
 export const show = async (req, res, next) => {
   try {
     let users = await user.find({});

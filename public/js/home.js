@@ -3,6 +3,8 @@ let info = document.getElementById("info");
 let edit = document.getElementById("edit-user");
 let update = document.getElementById("update");
 let purchase = document.getElementById("purchase");
+let logOut = document.querySelector(".logout");
+const api = "http://localhost:3000";
 // login.addEventListener("click", (e) => {
 //   window.location.href = "http://localhost:3000/login";
 // });
@@ -27,6 +29,24 @@ purchase.addEventListener("click", (e) => {
   setTimeout(() => {
     window.location.href = "http://localhost:3000/purchase";
   }, 1000);
+});
+
+logOut.addEventListener("click", (e) => {
+  fetch(api + "/auth/logout", {
+    method: "post",
+    headers: {
+      "content-type": "application/json",
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      setTimeout(() => {
+        window.location.href = "http://localhost:3000/login";
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
 
 // dom them gio hang

@@ -1,7 +1,4 @@
 import express from "express";
-const port = 3000;
-const app = express();
-
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import userRouter from "./routes/users.routes.js";
@@ -12,6 +9,9 @@ import homeRouter from "./routes/home.routes.js";
 import adminRouter from "./routes/admin.routes.js";
 import cookieParser from "cookie-parser";
 import authorize from "./middlewares/authorize.js";
+
+const port = 3000;
+const app = express();
 
 dotenv.config();
 
@@ -38,8 +38,7 @@ app.use("/food", foodRouter);
 app.use("/restaurant", restaurantRouter);
 app.use("/auth", authRouter);
 app.use("/", homeRouter);
-// app.use("/admin", authorize("admin"), adminRouter);
-app.use("/admin", adminRouter);
+app.use("/admin", authorize("admin"), adminRouter);
 
 app.get("/purchase-history", (req, res) => {
   res.render("purchase-history");

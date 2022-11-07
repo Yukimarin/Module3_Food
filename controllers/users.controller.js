@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import usersModel from "../models/users.model.js";
 import User from "../models/users.model.js";
 import bcrypt from "bcryptjs";
 // const Schema = mongoose.Schema;
