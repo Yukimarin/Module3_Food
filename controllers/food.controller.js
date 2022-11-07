@@ -1,10 +1,16 @@
 import mongoose from "mongoose";
 import Food from "../models/food.model.js";
 import Restaurant from "../models/restaurant.model.js";
-import { restaurant } from "./admin.controller.js";
+import { restaurant, food } from "./admin.controller.js";
 
 const Schema = mongoose.Schema;
 const RestaurantSchema = new Schema({
+  name: {
+    type: String,
+  },
+});
+
+const FoodSchema = new Schema({
   name: {
     type: String,
   },
@@ -65,11 +71,15 @@ export const show = async (req, res, next) => {
   let { id } = req.query;
   try {
     let findRes = await restaurant.findById(id).exec();
+    let foods = await food.find({});
+    let foodsData = foods.map((food) => food.toObject());
 
     res.render("food", {
       restaurant: findRes.toObject(),
+      foodList: foodsData,
     });
-    // console.log(restaurantsData);
+    console.log(foodsData);
+    console.log(findRes.toObject());
   } catch (error) {
     // res.send("something went really wrong");
     next();

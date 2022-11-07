@@ -16,8 +16,8 @@ const RestaurantSchema = new Schema({
     type: String,
   },
 });
-const user = mongoose.model("User", UserSchema);
-const food = mongoose.model("Food", FoodSchema);
+export const user = mongoose.model("User", UserSchema);
+export const food = mongoose.model("Food", FoodSchema);
 export const restaurant = mongoose.model("Restaurant", RestaurantSchema);
 
 export const update = async (req, res, next) => {

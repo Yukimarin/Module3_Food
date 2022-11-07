@@ -64,18 +64,17 @@
     <!-- Bottom -->
     <div class="bottom">
       <div class="left-bottom">
-        <img
-          src="<%= restaurant.image %> "
-          alt=""
-        />
+        <img src="<%= restaurant.image %> " alt="" />
       </div>
       <div class="right-bottom">
         <div class="link">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+              <li class="breadcrumb-item">
+                <a href="http://localhost:3000/">Trang chủ</a>
+              </li>
               <li class="breadcrumb-item active" aria-current="page">
-                Chick Garden Mart - Cổ Nhuế
+                <%= restaurant.nameRestaurant %>
               </li>
             </ol>
           </nav>
@@ -83,14 +82,14 @@
         <div class="content">
           <div class="shop">Shop/Cửa hàng</div>
           <div class="restaurant-name">
-            <h4>Chick Garden Mart - Cổ Nhuế</h4>
+            <h4><%= restaurant.nameRestaurant %></h4>
           </div>
-          <div class="restaurant-address">
-            106 Cổ Nhuế, P. Cổ Nhuế 2, Bắc Từ Liêm, Hà Nội
-          </div>
+          <div class="restaurant-address"><%= restaurant.address %></div>
           <div class="open-close">
             <button class="status">Mở cửa</button>
-            <span>09:00 - 23:00</span>
+            <span
+              ><%= restaurant.opentime %> - <%= restaurant.closetime %></span
+            >
           </div>
           <div class="price">
             <i class="fa-solid fa-money-bill"></i> 50,000 - 200,000
@@ -109,7 +108,7 @@
         </div>
       </div>
     </div>
- 
+
     <!-- Sub Footer -->
     <div class="container-fluid footer">
       <div class="menu-tab">Thực đơn</div>
