@@ -71,20 +71,26 @@ export const show = async (req, res, next) => {
   let { id } = req.query;
   try {
     let findRes = await restaurant.findById(id).exec();
-    let foods = await food.find({});
-    let foodsData = foods.map((food) => food.toObject());
+    let abc = findRes.toObject();
+    let a = abc.foods;
 
+    let relatedFoods = [];
+    for (let i = 0; i < a.length; i++) {
+      let foods = await food.findById(a[i].toString());
+      let c = foods.toObject();
+      relatedFoods.push(c);
+    }
+    console.log(relatedFoods);
     res.render("food", {
       restaurant: findRes.toObject(),
-      foodList: foodsData,
+      relatedFoods,
     });
-    console.log(foodsData);
-    console.log(findRes.toObject());
   } catch (error) {
     // res.send("something went really wrong");
     next();
   }
 };
+
 // export const create = async ( req, res, next ) => {
 //     try {
 //     const Food = aw

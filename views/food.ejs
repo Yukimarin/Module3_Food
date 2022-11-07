@@ -112,14 +112,15 @@
     <!-- Sub Footer -->
     <div class="container-fluid footer">
       <div class="menu-tab">Thực đơn</div>
+
       <div class="menu">
         <div class="sub-menu">
-          <div>Heo cháy tỏi</div>
-          <div>Bò ẩm cháy tỏi</div>
-          <div>Thực phẩm sơ chế</div>
-          <div>Nguyên liệu pha chế</div>
-          <div>Cơm cháy</div>
+          <div>Heo</div>
+          <div>Bò</div>
+          <div>Gà</div>
+          <div>Đỉa</div>
         </div>
+
         <div class="detail-menu">
           <div class="discount">
             <div class="icon-discount">
@@ -138,20 +139,20 @@
             />
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
+          <% for( let i = 0; i < relatedFoods.length; i++ ) { %>
           <div class="category-menu">
-            <div class="category">Heo cháy tỏi</div>
+            <div class="category"><%= relatedFoods[i].category %></div>
             <div class="food-list">
               <div class="image-food">
-                <img
-                  src="https://images.foody.vn/default/s120x120/shopeefood-deli-dish-no-image.png"
-                  alt=""
-                />
+                <img src="<%= relatedFoods[i].image %>" alt="" />
               </div>
-              <div class="name-food">Heo sợi cháy tỏi 100gr (không cay)</div>
-              <div class="price-food">90,000 đ</div>
+              <div class="name-food"><%= relatedFoods[i].foodname %></div>
+              <div class="price-food"><%= relatedFoods[i].price %> VND</div>
               <button class="add-number">+</button>
             </div>
           </div>
+
+          <% } %>
         </div>
         <div class="qr-code">
           <img src="../img/qr.JPG" alt="" />
