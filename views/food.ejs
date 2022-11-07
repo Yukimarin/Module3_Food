@@ -63,11 +63,9 @@
     </nav>
     <!-- Bottom -->
     <div class="bottom">
+      <% for( let i = 0; i < restaurantList.length; i++ ) { %>
       <div class="left-bottom">
-        <img
-          src="https://images.foody.vn/res/g110/1095807/prof/s640x400/foody-upload-api-foody-mobile-z2-58f5076f-210817153751.jpeg"
-          alt=""
-        />
+        <img src="<%= restaurantList[i].image %>" alt="" />
       </div>
       <div class="right-bottom">
         <div class="link">
@@ -75,7 +73,7 @@
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
               <li class="breadcrumb-item active" aria-current="page">
-                Chick Garden Mart - Cổ Nhuế
+                <%= restaurantList[i].nameRestaurant %>
               </li>
             </ol>
           </nav>
@@ -83,14 +81,15 @@
         <div class="content">
           <div class="shop">Shop/Cửa hàng</div>
           <div class="restaurant-name">
-            <h4>Chick Garden Mart - Cổ Nhuế</h4>
+            <h4><%= restaurantList[i].nameRestaurant %></h4>
           </div>
-          <div class="restaurant-address">
-            106 Cổ Nhuế, P. Cổ Nhuế 2, Bắc Từ Liêm, Hà Nội
-          </div>
+          <div class="restaurant-address"><%= restaurantList[i].address %></div>
           <div class="open-close">
             <button class="status">Mở cửa</button>
-            <span>09:00 - 23:00</span>
+            <span
+              ><%= restaurantList[i].opentime %> - <%=
+              restaurantList[i].closetime %></span
+            >
           </div>
           <div class="price">
             <i class="fa-solid fa-money-bill"></i> 50,000 - 200,000
@@ -108,6 +107,7 @@
           </div>
         </div>
       </div>
+      <% } %>
     </div>
 
     <!-- Sub Footer -->

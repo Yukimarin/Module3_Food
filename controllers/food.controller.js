@@ -1,5 +1,12 @@
 import mongoose from "mongoose";
 import Food from "../models/food.model.js";
+import { restaurant } from "./admin.controller.js";
+const Schema = mongoose.Schema;
+const RestaurantSchema = new Schema({
+  name: {
+    type: String,
+  },
+});
 
 export const createFood = async (req, res, next) => {
   try {
@@ -7,6 +14,22 @@ export const createFood = async (req, res, next) => {
     res.status(200).send("Food has been created");
   } catch (err) {
     next(err);
+  }
+};
+
+export const show = async (req, res, next) => {
+  try {
+    let restaurants = await restaurant.find({});
+    let restaurantsData = restaurants.map((restaurant) =>
+      restaurant.toObject()
+    );
+    console.log(restaurantsData);
+    res.render("food", {
+      restaurantList: restaurantsData,
+    });
+  } catch (error) {
+    res.send("something went really wrong");
+    next();
   }
 };
 

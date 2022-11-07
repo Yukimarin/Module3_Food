@@ -18,7 +18,7 @@ const RestaurantSchema = new Schema({
 });
 const user = mongoose.model("User", UserSchema);
 const food = mongoose.model("Food", FoodSchema);
-const restaurant = mongoose.model("Restaurant", FoodSchema);
+export const restaurant = mongoose.model("Restaurant", RestaurantSchema);
 
 export const update = async (req, res, next) => {
   if (req.params.id === req.user.id) {

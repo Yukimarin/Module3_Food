@@ -1,4 +1,25 @@
 import mongoose from "mongoose";
-import Food from "../models/food.model.js";
+import { restaurant } from "./admin.controller.js";
+const Schema = mongoose.Schema;
+const RestaurantSchema = new Schema({
+  name: {
+    type: String,
+  },
+});
+// const restaurant = mongoose.model("Restaurant", RestaurantSchema);
 
-
+export const show = async (req, res, next) => {
+  try {
+    let restaurants = await restaurant.find({});
+    let restaurantsData = restaurants.map((restaurant) =>
+      restaurant.toObject()
+    );
+    console.log(restaurantsData);
+    res.render("home", {
+      restaurantList: restaurantsData,
+    });
+  } catch (error) {
+    res.send("something went really wrong");
+    next();
+  }
+};
