@@ -65,8 +65,9 @@ export const show = async (req, res, next) => {
   let { id } = req.query;
   try {
     let findRes = await restaurant.findById(id).exec();
+
     res.render("food", {
-      restaurant: findRes,
+      restaurant: findRes.toObject(),
     });
     // console.log(restaurantsData);
   } catch (error) {
