@@ -20,14 +20,14 @@ info.addEventListener("click", (e) => {
 update.addEventListener("click", (e) => {
   // console.log("haha");
   setTimeout(() => {
-    window.location.href = "http://localhost:3000/user-info";
+    window.location.href = api + "/user-info";
   }, 1000);
 });
 
 purchase.addEventListener("click", (e) => {
   // console.log("haha");
   setTimeout(() => {
-    window.location.href = "http://localhost:3000/purchase";
+    window.location.href = api + "/purchase";
   }, 1000);
 });
 
@@ -41,7 +41,7 @@ logOut.addEventListener("click", (e) => {
     .then((res) => res.json())
     .then((data) => {
       setTimeout(() => {
-        window.location.href = "http://localhost:3000/login";
+        window.location.href = api + "/login";
       });
     })
     .catch((err) => {

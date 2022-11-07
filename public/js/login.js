@@ -5,7 +5,7 @@ let dk = document.getElementById("btn-dk");
 
 // dieu huong register
 dk.addEventListener("click", (e) => {
-  window.location.href = "http://localhost:3000/register";
+  window.location.href = api + "/register";
 });
 login.addEventListener("click", (e) => {
   e.preventDefault();

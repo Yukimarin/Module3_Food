@@ -42,7 +42,7 @@ login.addEventListener("submit", (e) => {
       });
 
       setTimeout(() => {
-        window.location.href = "http://localhost:3000/admin";
+        window.location.href = api + "/admin";
       }, 3000);
     })
     .catch((err) => {

@@ -32,7 +32,11 @@ function authorize(role = []) {
       jwt.verify(token, process.env.JWT, (err, decodeToken) => {
         console.log(decodeToken);
         if (err || !decodeToken.role) {
-          res.status(401).json({ message: "Unauthorized" });
+          res
+            .status(401)
+            .json({
+              message: "Về trang đăng nhập mà đăng nhập tài khoản khác",
+            });
         } else {
           if (role.length && !role.includes(decodeToken.role)) {
             return res.status(401).json({ message: "Ai cho may vao" });
