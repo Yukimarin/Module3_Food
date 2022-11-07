@@ -54,7 +54,7 @@
     justify-content: space-between;
     margin-right: 30px;
     cursor: pointer;
-    display: none;
+    /* display: none; */
 }
 
 .container-fluid .info .img-info{
