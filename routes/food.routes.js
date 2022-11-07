@@ -1,6 +1,13 @@
 import express from "express";
-import { createFood, update, del } from "../controllers/food.controller.js";
+import {
+  createFood,
+  update,
+  del,
+  show,
+} from "../controllers/food.controller.js";
 const router = express.Router();
+
+router.get("/", show);
 router.post("/signup", createFood);
 
 router.put("/", update);

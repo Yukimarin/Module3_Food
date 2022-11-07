@@ -1,6 +1,15 @@
 import mongoose from "mongoose";
 import Food from "../models/food.model.js";
 import Restaurant from "../models/restaurant.model.js";
+import { restaurant } from "./admin.controller.js";
+
+const Schema = mongoose.Schema;
+const RestaurantSchema = new Schema({
+  name: {
+    type: String,
+  },
+});
+// const restaurant = mongoose.model("Restaurant", RestaurantSchema);
 
 export const createFood = async (req, res, next) => {
   try {
@@ -50,6 +59,19 @@ export const del = async (req, res, next) => {
     }
   } catch (err) {
     next(err);
+  }
+};
+export const show = async (req, res, next) => {
+  let { id } = req.query;
+  try {
+    let findRes = await restaurant.findById(id).exec();
+    res.render("food", {
+      restaurant: findRes,
+    });
+    // console.log(restaurantsData);
+  } catch (error) {
+    // res.send("something went really wrong");
+    next();
   }
 };
 // export const create = async ( req, res, next ) => {

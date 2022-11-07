@@ -1,13 +1,11 @@
 import mongoose from "mongoose";
 import { restaurant } from "./admin.controller.js";
-
 const Schema = mongoose.Schema;
 const RestaurantSchema = new Schema({
-  nameRestaurant: {
+  name: {
     type: String,
   },
 });
-// const restaurant = mongoose.model("Restaurant", RestaurantSchema);
 
 export const show = async (req, res, next) => {
   try {
@@ -15,7 +13,6 @@ export const show = async (req, res, next) => {
     let restaurantsData = restaurants.map((restaurant) =>
       restaurant.toObject()
     );
-
     res.render("home", {
       restaurantList: restaurantsData,
     });

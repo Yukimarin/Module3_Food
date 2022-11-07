@@ -161,131 +161,29 @@
     
     <!-- Bottom -->
     <div class="banner">
-      <div class="example"><div id="doan" class="tittle">Đồ ăn</div>
-      <div class="owl-carousel owl-theme owl-carousel-theme">
-        <div class="item">
-          <img
-            class="img-media image-item"
-            src="https://images.foody.vn/res/g106/1050061/prof/s640x400/image-c9154909-211105213045.jpeg"
-          />
-          <div class="description">
-            <div id="namefood" class="name-food">Vịt Quay Chị Béo</div>
-            <div class="address">156 Ngõ 94 Hoàng Ngân, Cầu Giấy, Hà Nội</div>
-            <div>150,000 - 200,000</div>
+      <div class="example">
+        <% for( let i = 0; i < restaurantList.length; i++ ) { %>
+          <div id="doan" class="tittle"><%= restaurantList[i].category %></div>
+          <div class="owl-carousel owl-theme owl-carousel-theme">
+            <a style="text-decoration: none; color: white"href="/food?id=<%= restaurantList[i]._id %>">
+              <div class="item">
+              <img
+                class="img-media image-item"
+                src="<%= restaurantList[i].image %>"
+              />
+              <div class="description">
+                <div id="namefood" class="name-food"><%= restaurantList[i].nameRestaurant %></div>
+                <div class="address"><%= restaurantList[i].address %></div>
+                <div><%= restaurantList[i].opentime %> - <%= restaurantList[i].closetime %></div>
+              </div>
+              <!-- <button id="btn-add-bags" class="button-buy">
+                Thêm giỏ hàng
+              </button> -->
+            </div>
+          </a>     
           </div>
-          <button id="btn-add-bags" class="button-buy">
-            Thêm giỏ hàng
-          </button>
-        </div>
-      </div>
-      <br>
-      <div id="bia" class="tittle">Bia</div>
-      <div class="owl-carousel owl-theme owl-carousel-theme">
-        <div class="item">
-          <img
-            class="img-media image-item"
-            src="https://images.foody.vn/res/g106/1050061/prof/s640x400/image-c9154909-211105213045.jpeg"
-          />
-          <div class="description">
-            <div id="namefood" class="name-food">Vịt Quay Chị Béo</div>
-            <div class="address">156 Ngõ 94 Hoàng Ngân, Cầu Giấy, Hà Nội</div>
-            <div>150,000 - 200,000</div>
-          </div>
-          <button class="button-buy">
-             Thêm giỏ hàng
-          </button>
-        </div>
-      </div>
-      <br>
-      <div id="thucpham" class="tittle">Thực phẩm</div>
-      <div class="owl-carousel owl-theme owl-carousel-theme">
-        <div class="item">
-          <img
-            class="img-media image-item"
-            src="https://images.foody.vn/res/g106/1050061/prof/s640x400/image-c9154909-211105213045.jpeg"
-          />
-          <div class="description">
-            <div id="namefood" class="name-food">Vịt Quay Chị Béo</div>
-            <div class="address">156 Ngõ 94 Hoàng Ngân, Cầu Giấy, Hà Nội</div>
-            <div>150,000 - 200,000</div>
-          </div>
-          <button class="button-buy">
-             Thêm giỏ hàng
-          </button>
-        </div>
-      </div>
-      <br>
-      <div id="hoa" class="tittle">Hoa</div>
-      <div class="owl-carousel owl-theme owl-carousel-theme">
-        <div class="item">
-          <img
-            class="img-media image-item"
-            src="https://images.foody.vn/res/g106/1050061/prof/s640x400/image-c9154909-211105213045.jpeg"
-          />
-          <div class="description">
-            <div id="namefood" class="name-food">Vịt Quay Chị Béo</div>
-            <div class="address">156 Ngõ 94 Hoàng Ngân, Cầu Giấy, Hà Nội</div>
-            <div>150,000 - 200,000</div>
-          </div>
-          <button class="button-buy">
-             Thêm giỏ hàng
-          </button>
-        </div>
-      </div>
-      <br>
-      <div id="sieuthi" class="tittle">Siêu thị</div>
-      <div class="owl-carousel owl-theme owl-carousel-theme">
-        <div class="item">
-          <img
-            class="img-media image-item"
-            src="https://images.foody.vn/res/g106/1050061/prof/s640x400/image-c9154909-211105213045.jpeg"
-          />
-          <div class="description">
-            <div id="namefood" class="name-food">Vịt Quay Chị Béo</div>
-            <div class="address">156 Ngõ 94 Hoàng Ngân, Cầu Giấy, Hà Nội</div>
-            <div>150,000 - 200,000</div>
-          </div>
-          <button class="button-buy">
-             Thêm giỏ hàng
-          </button>
-        </div>
-      </div>
-      <br>
-      <div id="thuoc" class="tittle">Thuốc</div>
-      <div class="owl-carousel owl-theme owl-carousel-theme">
-        <div class="item">
-          <img
-            class="img-media image-item"
-            src="https://images.foody.vn/res/g106/1050061/prof/s640x400/image-c9154909-211105213045.jpeg"
-          />
-          <div class="description">
-            <div id="namefood" class="name-food">Vịt Quay Chị Béo</div>
-            <div class="address">156 Ngõ 94 Hoàng Ngân, Cầu Giấy, Hà Nội</div>
-            <div>150,000 - 200,000</div>
-          </div>
-          <button class="button-buy">
-             Thêm giỏ hàng
-          </button>
-        </div>
-      </div>
-      <br>
-      <div id="thucung" class="tittle">Thú cưng</div>
-      <div class="owl-carousel owl-theme owl-carousel-theme">
-        <div class="item">
-          <img
-            class="img-media image-item"
-            src="https://images.foody.vn/res/g106/1050061/prof/s640x400/image-c9154909-211105213045.jpeg"
-          />
-          <div class="description">
-            <div id="namefood" class="name-food">Vịt Quay Chị Béo</div>
-            <div class="address">156 Ngõ 94 Hoàng Ngân, Cầu Giấy, Hà Nội</div>
-            <div>150,000 - 200,000</div>
-          </div>
-          <button class="button-buy">
-             Thêm giỏ hàng
-          </button>
-        </div>
-      </div>
+            <br>
+        <% } %>
        </div>
     </div>
     
