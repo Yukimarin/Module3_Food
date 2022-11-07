@@ -5,7 +5,7 @@ let update = document.getElementById("update");
 let purchase = document.getElementById("purchase");
 let logOut = document.querySelector(".logout");
 const api = "http://localhost:3000";
-import{show} from ("../../controllers/food.controller.js")
+// import{show} from ("../../controllers/food.controller.js")
 // login.addEventListener("click", (e) => {
 //   window.location.href = "http://localhost:3000/login";
 // });
@@ -56,41 +56,62 @@ let add = document.getElementById("btn-plus");
 let quantity = document.getElementById("quantity");
 let price = document.getElementById("price");
 let bagNumber = document.getElementById("bag-number");
-giaTri = quantity.innerText;
-minus.onclick = function () {
-  giaTri = `${Number(giaTri) - 1}`;
-  if (giaTri <= 0) {
-    giaTri = 0;
-    quantity.innerText = giaTri;
-  } else {
-    quantity.innerText = giaTri;
-  }
-};
-add.onclick = function () {
-  giaTri = `${Number(giaTri) + 1}`;
-  quantity.innerText = giaTri;
-};
+let giaTri = 0;
+// giaTri = quantity.innerText;
+// minus.onclick = function () {
+//   giaTri = `${Number(giaTri) - 1}`;
+//   if (giaTri <= 0) {
+//     giaTri = 0;
+//     quantity.innerText = giaTri;
+//   } else {
+//     quantity.innerText = giaTri;
+//   }
+// };
+// add.onclick = function () {
+//   giaTri = `${Number(giaTri) + 1}`;
+//   quantity.innerText = giaTri;
+// };
 // Thêm giỏ hàng
 let addBags = document.getElementById("bags");
-let addFoods = document.getElementById("btn-add-food");
+let addFoods = document.querySelectorAll("#btn-add-food");
+// console.log(addFoods);
+addFoods.forEach((e) => {
+  e.addEventListener("click", (event) => {
+    console.log(event.target.parentElement.innerHTML);
+    // console.log("haha");
+    // console.log(addFoods);
+    let div = document.createElement("div");
+    div.classList.add("bag-detail-menu");
+    div.innerHTML = `${event.target.parentElement.innerHTML.replace(
+      `<button id="btn-add-food" class="add-number">+</button>`,
+      ""
+    )}`;
+    console.log(div.children[2]);
+    div.children[2].innerHTML = ` <div id="bag-number" class="bag-number-food">
+        <span
+          ><button id="btn-minus" class="btn-quantity">-</button>
+        <span id="quantity">${giaTri}</span>
+           <button id="btn-plus" class="btn-quantity">+</button>
+         </span>
+       </div>`;
 
-addFoods.addEventListener("click", (e) => {
-  console.log("haha");
-  addBags.innerHTML = `<div class="bag-detail-menu">
-  <div class="bag-img-food">
-    <img
-      src="<%= relatedFoods[i].image %>"
-      alt=""
-    />
-  </div>
-  <div class="bag-name-food"><%= relatedFoods[i].foodname %></div>
-  <div id="bag-number" class="bag-number-food">
-    <span
-      ><button id="btn-minus" class="btn-quantity">-</button>
-      <span id="quantity">${giaTri}</span>
-      <button id="btn-plus" class="btn-quantity">+</button>
-    </span>
-  </div>
-  <div id="price" class="bag-price-food"><%= relatedFoods[i].price %></div>
-</div>`;
+    addBags.appendChild(div);
+    // `<div class="bag-detail-menu">
+    //   <div class="bag-img-food">
+    //     <img
+    //       src="<%= relatedFoods[i].image %>"
+    //       alt=""
+    //     />
+    //   </div>
+    //   <div class="bag-name-food"><%= relatedFoods[i].foodname %></div>
+    //   <div id="bag-number" class="bag-number-food">
+    //     <span
+    //       ><button id="btn-minus" class="btn-quantity">-</button>
+    //       <span id="quantity">${giaTri}</span>
+    //       <button id="btn-plus" class="btn-quantity">+</button>
+    //     </span>
+    //   </div>
+    //   <div id="price" class="bag-price-food"><%= relatedFoods[i].price %></div>
+    // </div>`;
+  });
 });

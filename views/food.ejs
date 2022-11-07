@@ -115,9 +115,7 @@
               aria-label="Close"
             ></button>
           </div>
-          <div id="bags" class="modal-body bag-food">
-            
-          </div>
+          <div id="bags" class="modal-body bag-food"></div>
           <div class="modal-footer">
             <div id="total-price" class="total">Tổng tiền: 35,000 VNĐ</div>
             <div>
@@ -220,6 +218,9 @@
                 <img src="<%= relatedFoods[i].image %>" alt="" />
               </div>
               <div class="name-food"><%= relatedFoods[i].foodname %></div>
+              <!-- test -->
+              <div></div>
+              <!-- test -->
               <div class="price-food"><%= relatedFoods[i].price %> VND</div>
               <button id="btn-add-food" class="add-number">+</button>
             </div>
@@ -295,7 +296,7 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
-    <script src="sweetalert2.all.min.js"></script>
+    <script src="/sweetalert2.all.min.js"></script>
     <script src="/js/food.js"></script>
   </body>
 </html>

@@ -45,7 +45,7 @@
     height: 40px;
     color:#EE4D2D; 
     background:#F8F9FA;
-    /* display: none; */
+    display: none;
 }
 
 .container-fluid .info {
