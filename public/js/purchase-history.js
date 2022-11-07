@@ -73,8 +73,3 @@ add.onclick = function () {
 // Thêm giỏ hàng
 let addBags = document.getElementById("btn-add-bags");
 addBags.addEventListener("click");
-
-
-
-
-

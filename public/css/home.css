@@ -45,7 +45,7 @@
     height: 40px;
     color:#EE4D2D; 
     background:#F8F9FA;
-    display: none;
+    /* display: none; */
 }
 
 .container-fluid .info {
@@ -54,7 +54,7 @@
     justify-content: space-between;
     margin-right: 30px;
     cursor: pointer;
-    /* display: none; */
+    display: none;
 }
 
 .container-fluid .info .img-info{

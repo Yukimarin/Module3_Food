@@ -44,6 +44,104 @@
     height: 40px;
     color:#EE4D2D; 
     background:#F8F9FA;
+    display: none;
+}
+
+.container-fluid .info {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+    cursor: pointer;
+    /* display: none; */
+}
+
+.container-fluid .info .img-info{
+    width: 40px;
+    height: 40px;
+    /* border: 1px solid red; */
+}
+
+.container-fluid .info .img-info img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.container-fluid .info .name-info{
+    /* width: 100px; */
+    height: 40px;
+    /* border: 1px solid red; */
+    font-weight: bold;
+    line-height: 40px;
+}
+
+/* logout */
+.container-fluid .edit-user {
+    width: 200px;
+    /* height: 400px; */
+    border: 1px solid grey;
+    background-color: white;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    right: 30px;
+    top: 60px;
+    box-shadow: 0px 4px 9px -1px rgba(0,0,0,0.76);
+-webkit-box-shadow: 0px 4px 9px -1px rgba(0,0,0,0.76);
+-moz-box-shadow: 0px 4px 9px -1px rgba(0,0,0,0.76);
+   
+}
+.off {
+    display: none;
+}
+.container-fluid .edit-user .bag {
+    /* width: 200px; */
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid grey;
+    cursor: pointer;
+}
+
+
+.container-fluid .edit-user .bag:hover{
+    background-color: #F5F5F5;
+}
+.container-fluid .edit-user .bag .fa-bag-shopping{
+    /* width: 200px; */
+    margin-left: 10px;
+    margin-right: 25px;
+    color: #6CC942
+}
+
+.container-fluid .edit-user .update {
+    /* width: 200px; */
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    border-bottom: 1px solid grey;
+}
+.container-fluid .edit-user .update:hover{
+    background-color: #F5F5F5;
+}
+.container-fluid .edit-user .update .fa-user-plus{
+    margin-left: 10px;
+    margin-right: 20px;
+    color: #E2963B;
+}
+.container-fluid .edit-user .logout{
+    /* width: 200px; */
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+}
+.container-fluid .edit-user .logout:hover{
+    background-color: #F5F5F5;
+}
+.container-fluid .edit-user .logout .fa-right-from-bracket{
+    margin-left: 10px;
+    margin-right: 23px;
+    color:#6D6F71;
 }
 /* Bottom */
 .bottom{
@@ -279,3 +377,75 @@ height: 100%;
     width: 100%;
     height: 100%;
 }
+
+/* Bag food */
+
+.bag-food .bag-detail-menu{
+    width: 100%;
+    height: 60px;
+    /* border: 1px solid red; */
+    border-bottom: 1px dotted grey;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bag-food .bag-detail-menu .bag-img-food{
+    width: 45px;
+    height: 40px;
+    /* border: 1px solid red; */
+    margin: 10px 10px;
+}
+
+.bag-food .bag-detail-menu .bag-img-food img{
+   width: 100%;
+   height: 100%;
+}
+
+.bag-food .bag-detail-menu .bag-name-food{
+    width: 270px;
+    height: 40px;
+    /* border: 1px solid red; */
+    font-size: 15px;
+    margin: 10px 10px;
+    line-height: 40px;
+}
+
+.bag-food .bag-detail-menu .bag-number-food{
+    width: 60px;
+    height: 40px;
+    /* border: 1px solid red; */
+    margin: 10px 10px;
+    line-height: 40px;
+    font-size: 13px;
+}
+
+.bag-food .bag-detail-menu .bag-number-food .btn-quantity{
+    border:none;
+    background-color: white;
+    width: 15px;
+    height: 15px;
+}
+
+.bag-food .bag-detail-menu .bag-price-food{
+    width: 60px;
+    height: 40px;
+    /* border: 1px solid red; */
+    margin: 10px 10px;
+    line-height: 40px;
+}
+
+
+.modal-footer .btn-secondary:hover {
+    background-color: #6CC942!important;
+    /* font-weight: bold!important; */
+    color: white!important;
+    transition-duration: 0.5;
+}
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #FFD073;
+  }

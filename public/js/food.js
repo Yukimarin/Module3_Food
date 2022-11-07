@@ -5,10 +5,10 @@ let update = document.getElementById("update");
 let purchase = document.getElementById("purchase");
 let logOut = document.querySelector(".logout");
 const api = "http://localhost:3000";
+import{show} from ("../../controllers/food.controller.js")
 // login.addEventListener("click", (e) => {
 //   window.location.href = "http://localhost:3000/login";
 // });
-
 info.addEventListener("click", (e) => {
   if (edit.classList.contains("off")) {
     edit.classList.remove("off");
@@ -71,10 +71,26 @@ add.onclick = function () {
   quantity.innerText = giaTri;
 };
 // Thêm giỏ hàng
-let addBags = document.getElementById("btn-add-bags");
-addBags.addEventListener("click");
+let addBags = document.getElementById("bags");
+let addFoods = document.getElementById("btn-add-food");
 
-
-
-
-
+addFoods.addEventListener("click", (e) => {
+  console.log("haha");
+  addBags.innerHTML = `<div class="bag-detail-menu">
+  <div class="bag-img-food">
+    <img
+      src="<%= relatedFoods[i].image %>"
+      alt=""
+    />
+  </div>
+  <div class="bag-name-food"><%= relatedFoods[i].foodname %></div>
+  <div id="bag-number" class="bag-number-food">
+    <span
+      ><button id="btn-minus" class="btn-quantity">-</button>
+      <span id="quantity">${giaTri}</span>
+      <button id="btn-plus" class="btn-quantity">+</button>
+    </span>
+  </div>
+  <div id="price" class="bag-price-food"><%= relatedFoods[i].price %></div>
+</div>`;
+});

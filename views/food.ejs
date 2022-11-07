@@ -18,13 +18,13 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/css/menu.css" />
+    <link rel="stylesheet" href="/css/food.css" />
     <title>Menu</title>
   </head>
   <body>
     <!-- Heading -->
-    <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-light top-heading">
+      <div class="container-fluid heading">
         <div class="logo">
           <a href="http://localhost:3000/">
             <img src="/img/symbol.png" alt=""
@@ -34,33 +34,106 @@
         <div class="menu collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Đồ ăn</a>
+              <a class="nav-link" aria-current="page" href="#doan">Đồ ăn</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Thực phẩm</a>
+              <a class="nav-link" aria-current="page" href="#thucpham"
+                >Thực phẩm</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Bia</a>
+              <a class="nav-link" aria-current="page" href="#bia">Bia</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Hoa</a>
+              <a class="nav-link" aria-current="page" href="#hoa">Hoa</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Siêu thị</a>
+              <a class="nav-link" aria-current="page" href="#sieuthi"
+                >Siêu thị</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Thuốc</a>
+              <a class="nav-link" aria-current="page" href="#thuoc">Thuốc</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Thú cưng</a>
+              <a class="nav-link" aria-current="page" href="#thucung"
+                >Thú cưng</a
+              >
             </li>
           </ul>
         </div>
         <div class="register">
-          <button class="btn-register">Đăng nhập</button>
+          <button id="btn-login" class="btn-register">Đăng nhập</button>
+        </div>
+        <div id="info" class="info">
+          <div class="img-info">
+            <img
+              src="https://images.foody.vn/usr/g4512/45113154/avt/s200x200/foody-avatar-c9478b29-965b-4a66--8d14497a-221031092650.jpeg"
+              alt=""
+            />
+          </div>
+          <div class="name-info">Bách Nguyễn</div>
+        </div>
+        <div id="edit-user" class="edit-user off">
+          <div
+            class="bag"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            <i class="fa-solid fa-bag-shopping"></i>
+            Giỏ hàng
+          </div>
+          <div id="update" class="update">
+            <i class="fa-solid fa-user-plus"></i>
+            Cập nhật tài khoản
+          </div>
+          <div class="logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Đăng xuất
+          </div>
         </div>
       </div>
     </nav>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Lịch sử mua hàng
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div id="bags" class="modal-body bag-food">
+            
+          </div>
+          <div class="modal-footer">
+            <div id="total-price" class="total">Tổng tiền: 35,000 VNĐ</div>
+            <div>
+              <button
+                id="purchase"
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Thanh toán
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Bottom -->
     <div class="bottom">
       <div class="left-bottom">
@@ -148,7 +221,7 @@
               </div>
               <div class="name-food"><%= relatedFoods[i].foodname %></div>
               <div class="price-food"><%= relatedFoods[i].price %> VND</div>
-              <button class="add-number">+</button>
+              <button id="btn-add-food" class="add-number">+</button>
             </div>
           </div>
 
@@ -223,6 +296,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="sweetalert2.all.min.js"></script>
-    <script src="/js/menu.js"></script>
+    <script src="/js/food.js"></script>
   </body>
 </html>
