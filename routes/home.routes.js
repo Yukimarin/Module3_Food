@@ -1,4 +1,5 @@
 import express from "express";
+import { show } from "../controllers/home.controller.js";
 const router = express.Router();
 
 router.get("/", (req, res) => {
@@ -20,4 +21,5 @@ router.get("/login", (req, res) => {
 router.get("/register", (req, res) => {
   res.render("register");
 });
+
 export default router;

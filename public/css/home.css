@@ -145,85 +145,109 @@
     color:#6D6F71;
 }
 /* Bottom */
-.model-box {
-    padding: 0px 10px;
-    margin-top: 30px;
-    text-transform: uppercase;
-    text-align: center;
-    color: grey;
-    font-size: xx-large;
-    font-weight: bold;
-}
-
-.model-box .product-men{
-    margin-left: 10px;
-    margin-right: 20px;
-    padding: 5px 20px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.model-box .product-men .section-product{
-    width: 180px;
-    height: 300px;
-}
-
-.section-product .product-picture {
-    width: 100%;
-    height: 60%;
-    position: relative;
-    transition: all 0.5 ease-in-out;
-    overflow: hidden;
-}
-
-.product-picture .like{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: small;
-    border: none;
-    background-color: #F6F6F6;
-}
-.section-product .product-picture img{
-    width: 100%;
-    height: 100%;
-}
-
-.product-row:hover img{
-    transform: scale(1.2);
-    opacity: 0.7;
-}
-
-.section-product .description{
-    padding: 10px 10px;
-    font-size: small;
-    font-weight: bold;
-    text-align: left;
-    color:black
-}
-
-.section-product .description .address{
-   font-weight: lighter;
-   font-style: italic;
-}
-
-.section-product .button-buy{
-    background-color: black;
+.banner {
+    background-image: url(https://shopeefood.vn/app/assets/img/main-banner.jpg?45bff8c9ec408a5ba51f9fdef662324e);
     color: white;
-    font-size: small;
-    border-radius: 5px;
+}
+
+.example {
+    height: 650px;
+    overflow-y: scroll;
+    /* border: 1px solid red; */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
     display: none;
 }
 
-.section-product .button-buy a{
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.tittle {
+    color: white;
+    font-size: x-large;
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 10px;
+}
+
+.description .name-food{
+    font-weight: bold;
+}
+
+.description .address{
+   font-style: italic;
+}
+
+.item .button-buy{
+    background-color: white;
+    color: black;
+    font-size: small;
+    border-radius: 5px;
+    /* display: none; */
+    margin-left: 65px;
+    margin-top: 10px;
+    padding: 5px 10px;
+    display: none;
+}
+
+.item .button-buy a{
     text-decoration: none;
     color: white;
 }
 
-.product-men .section-product:hover .button-buy{
-    display: inline-block;
+.item:hover .button-buy{
+    transition-duration: 0.5s;
+    display: inline;
 }
 
+
+.owl-carousel-theme {
+    max-width: 80%;
+    margin-left: 12.5%;
+    padding-left: 10px;
+    padding-right: 30px;
+  }
+  .owl-theme .owl-nav {
+    margin-top: 10px;
+    display: flex;
+    position: absolute;
+    top: 150px;
+  }
+  .owl-carousel .owl-nav .owl-prev {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50% !important;
+    background-color: #000 !important;
+    color: white !important;
+    right: -60px;
+    padding: auto !important;
+  }
+  .owl-carousel .owl-nav .owl-prev:hover {
+    background-color: #a6a6a6 !important;
+  }
+  .owl-carousel .owl-nav .owl-next {
+    display: flex;
+    position: absolute;
+    left: 1220px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50% !important;
+    background-color: #000 !important;
+    color: white !important;
+    border-radius: 50%;
+    padding: auto !important;
+  }
+  .owl-carousel .owl-nav .owl-next:hover {
+    background-color: #a6a6a6 !important;
+  }
+
+  
 
 /* Footer partner */
 .step-order{
@@ -238,8 +262,8 @@
 }
 
 .step-order img{
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
 }
 /* partner */
 .partner {
@@ -255,8 +279,8 @@
 .partner .image {
     position: absolute;
     /* width: 300px; */
-    top: 3970px;
-    left: 830px;
+    top: 1247px;
+    left: 850px;
     height: 330px;
     /* border: 1px solid red; */
 }
@@ -275,7 +299,7 @@
 .other-partner .image {
     position: absolute;
     width: 250px;
-    top:4413px;
+    top:1675px;
     left: 860px;
     height: 290px;
     /* border: 1px solid red; */
@@ -388,3 +412,12 @@
     color: white!important;
     transition-duration: 0.5;
 }
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #FFD073;
+  }
+
