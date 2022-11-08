@@ -3,7 +3,8 @@ let info = document.getElementById("info");
 let edit = document.getElementById("edit-user");
 let update = document.getElementById("update");
 let purchase = document.getElementById("purchase");
-let logOut = document.querySelector(".logout");
+// let logOut = document.querySelector(".logout");
+let logOut = document.getElementById("logout");
 const api = "http://localhost:3000";
 // login.addEventListener("click", (e) => {
 //   window.location.href = "http://localhost:3000/login";
@@ -32,6 +33,7 @@ purchase.addEventListener("click", (e) => {
 });
 
 logOut.addEventListener("click", (e) => {
+  console.log("aaa");
   fetch(api + "/auth/logout", {
     method: "post",
     headers: {
@@ -73,8 +75,3 @@ add.onclick = function () {
 // Thêm giỏ hàng
 let addBags = document.getElementById("btn-add-bags");
 addBags.addEventListener("click");
-
-
-
-
-

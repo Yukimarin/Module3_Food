@@ -4,7 +4,9 @@ import { show } from "../controllers/home.controller.js";
 const router = express.Router();
 
 router.get("/", show);
-
+router.get("/itr", (req, res) => {
+  res.render("introduce");
+});
 router.get("/user-info", (req, res) => {
   res.render("user-info");
 });
