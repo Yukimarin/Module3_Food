@@ -72,11 +72,13 @@ export const show = async (req, res, next) => {
     let restaurantsData = restaurants.map((restaurant) =>
       restaurant.toObject()
     );
+    console.log(users[0]._id.toString());
 
     res.render("admin", {
       userList: usersData,
       foodList: foodsData,
       restaurantList: restaurantsData,
+      users: users,
     });
   } catch (error) {
     res.send("something went really wrong");

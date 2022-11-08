@@ -18,7 +18,7 @@ export const update = async (req, res, next) => {
         user.id,
         {
           $set: {
-            ...req.body,
+            status: req.body.status,
             password: bcrypt.hashSync(
               req.body.password,
               bcrypt.genSaltSync(10)
