@@ -55,29 +55,15 @@ let minus = document.getElementById("btn-minus");
 let add = document.getElementById("btn-plus");
 let quantity = document.getElementById("quantity");
 let price = document.getElementById("price");
-let bagNumber = document.getElementById("bag-number");
 let giaTri = 0;
-// giaTri = quantity.innerText;
-// minus.onclick = function () {
-//   giaTri = `${Number(giaTri) - 1}`;
-//   if (giaTri <= 0) {
-//     giaTri = 0;
-//     quantity.innerText = giaTri;
-//   } else {
-//     quantity.innerText = giaTri;
-//   }
-// };
-// add.onclick = function () {
-//   giaTri = `${Number(giaTri) + 1}`;
-//   quantity.innerText = giaTri;
-// };
 // Thêm giỏ hàng
 let addBags = document.getElementById("bags");
 let addFoods = document.querySelectorAll("#btn-add-food");
+
 // console.log(addFoods);
 addFoods.forEach((e) => {
   e.addEventListener("click", (event) => {
-    console.log(event.target.parentElement.innerHTML);
+    // console.log(event.target.parentElement.innerHTML);
     // console.log("haha");
     // console.log(addFoods);
     let div = document.createElement("div");
@@ -86,16 +72,14 @@ addFoods.forEach((e) => {
       `<button id="btn-add-food" class="add-number">+</button>`,
       ""
     )}`;
-    console.log(div.children[2]);
+    // console.log(div.children[2]);
     div.children[2].innerHTML = ` <div id="bag-number" class="bag-number-food">
-        <span
-          ><button id="btn-minus" class="btn-quantity">-</button>
-        <span id="quantity">${giaTri}</span>
-           <button id="btn-plus" class="btn-quantity">+</button>
-         </span>
        </div>`;
 
     addBags.appendChild(div);
+    // let bagNumber = document.getElementById("bag-number");
+    // console.log(bagNumber);
+
     // `<div class="bag-detail-menu">
     //   <div class="bag-img-food">
     //     <img
@@ -113,5 +97,14 @@ addFoods.forEach((e) => {
     //   </div>
     //   <div id="price" class="bag-price-food"><%= relatedFoods[i].price %></div>
     // </div>`;
+    let bagItems = document.querySelectorAll(".bag-detail-menu");
+    let total = 0;
+    bagItems.forEach((e1) => {
+      total += Number(e1.children[3].innerText.replace(" VND", ""));
+    });
+    console.log(total);
+    document.getElementById(
+      "total-price"
+    ).innerText = `Tong Tien: ${total} VND `;
   });
 });

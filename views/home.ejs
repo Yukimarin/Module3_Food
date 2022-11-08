@@ -155,27 +155,32 @@
     <!-- Bottom -->
     <div class="banner">
       <div class="example">
-        <% for( let i = 0; i < restaurantList.length; i++ ) { %>
-          <div id="doan" class="tittle"><%= restaurantList[i].category %></div>
-          <div class="owl-carousel owl-theme owl-carousel-theme">
-            <a style="text-decoration: none; color: white"href="/food?id=<%= restaurantList[i]._id %>">
-              <div class="item">
-              <img
-                class="img-media image-item"
-                src="<%= restaurantList[i].image %>"
-              />
-              <div class="description">
-                <div id="namefood" class="name-food"><%= restaurantList[i].nameRestaurant %></div>
-                <div class="address"><%= restaurantList[i].address %></div>
-                <div><%= restaurantList[i].opentime %> - <%= restaurantList[i].closetime %></div>
+        <% for( let i = 0; i < categoryList.length; i++) { %>
+          <div id="doan" class="tittle"><%= categoryList[i] %></div>
+            <div class="owl-carousel owl-theme owl-carousel-theme">
+              
+          <% for( let j = 0; j<restaurantList[i].length; j++) { %>
+              <a style="text-decoration: none; color: white"href="/food?id=<%= restaurantList[i][j]._id %>">
+                <div class="item">
+                <img
+                  class="img-media image-item"
+                  src="<%= restaurantList[i][j].image %>"
+                />
+                <div class="description">
+                  <div id="namefood" class="name-food"><%= restaurantList[i][j].nameRestaurant %></div>
+                  <div class="address"><%= restaurantList[i][j].address %></div>
+                  <div><%= restaurantList[i][j].opentime %> - <%= restaurantList[i][j].closetime %></div>
+                </div>
+                <!-- <button id="btn-add-bags" class="button-buy">
+                  Thêm giỏ hàng
+                </button> -->
               </div>
-              <!-- <button id="btn-add-bags" class="button-buy">
-                Thêm giỏ hàng
-              </button> -->
-            </div>
-          </a>     
+              </a>     
+              
+        <% } %>
           </div>
             <br>
+
         <% } %>
        </div>
     </div>
