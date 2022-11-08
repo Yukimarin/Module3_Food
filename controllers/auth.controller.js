@@ -20,7 +20,10 @@ export const signin = async (req, res, next) => {
   try {
     const user = await User.findOne({ email: req.body.email });
     if (!user) return next(404, "User not found!");
-    if (user.status === 0) return res.status(500).send("deo cho dang nhap day");
+    if (user.status === 0)
+      return res
+        .status(500)
+        .send({ message: "Đăng nhập thành công. Nhưng tài khoản bị khoá :))" });
     const isCorrect = await bcrypt.compare(req.body.password, user.password);
 
     if (!isCorrect) return next(400, "Wrong Credentials!");
